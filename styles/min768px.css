@@ -1,0 +1,408 @@
+
+
+  /* ==============================Styles for min-width: 768px ====================================*/
+                            @media screen and (min-width: 768px) {
+                              .gridContent {
+                                display: grid;
+                                top: 0;
+                                margin: 0px;
+                                width: 100%;
+                                height: 100dvh;
+                                position: absolute;
+                                justify-content: center;
+                                background-position: center center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                grid-template-columns: 1fr 320px 1fr;
+                                grid-template-rows: 60px 260dvh auto;
+                                grid-template-areas:
+                                  ". title ."
+                                  "ls content rs"
+                                  "ls footer rs";
+                                z-index: 0;
+                              }
+
+            #Mysteries_Container{
+            grid-area: content;
+            position: absolute;
+            left: 80%;
+            top: 10px;
+          }
+
+           /* POP UP MSG */
+          .pop_up_msg{
+            position: fixed;
+            color: var(--green-popMsg);
+            z-index: 9;
+            top: 150px;
+            left: 35%;
+            font-size: small;
+            display: none;
+            transition: ease 0.5s;
+          }
+          
+          .pop_up_msg.active{
+            position: fixed;
+            color: var(--green-popMsg);
+            z-index: 9;
+            top: 180px;
+            left: 47%;            
+            font-size: small;
+            display: block;
+            transition: ease 0.5s;
+          }
+
+          .joyful_btn,
+          .light_btn,
+          .sorrowful_btn,
+          .glorious_btn {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            width: 200px;
+            height: 45px;
+            padding: 5px;
+            left: -50px;
+            top: -15px;
+            border-radius: 10px;
+            background: none;
+            border: none;
+            color: inherit;
+            transform: scale(0.8);
+            letter-spacing: 1px;
+            margin: 0;
+            cursor: pointer;
+            }
+
+          .joyful_btn:hover ,
+          .light_btn:hover ,
+          .sorrowful_btn:hover ,
+          .glorious_btn:hover {
+            position: relative;
+            justify-content: space-around;
+            width: 200px;
+            height: 45px;
+            padding: 5px;
+            left: -50px;
+            top: -15px;
+            border-radius: 10px;
+            color: var(--lighterblue);
+            transform: scale(0.8);
+            letter-spacing: 1px;
+            margin: 0;
+            cursor: pointer;
+            box-shadow: 0 0 7px 1px var(--lightblue);
+            }
+           #Mysteries_Container{
+            grid-area: content;
+            position: relative;
+            left: -8.4em;
+            width: 635px;
+            top: 25px;
+          }
+
+                              #Joyful__Mysteries,
+                              #Mysteries__of__Light,
+                              #Sorrowful__Mysteries,
+                              #The__Glorious__Mysteries{
+                                position: absolute;
+                                bottom: 100px;
+                                min-width: 320px;
+                                max-width: 100%;
+                                text-align: center;
+                              }
+                          
+                              .J1,.L1,.S1,.G1,
+                              .J2,.L2,.S2,.G2,
+                              .J3,.L3,.S3,.G3,
+                              .J4,.L4,.S4,.G4,
+                              .J5,.L5,.S5,.G5{
+                                position: absolute;
+                                margin-left: 8.4em;
+                                color: var(--darkModeText);
+                                background-color: var(--darkerBlue);
+                                opacity: 0;
+                                padding: 20px ;
+                                border: none;
+                                border-radius: 10px;
+                                min-width: 320px;
+                                max-width: 360px;
+                                min-height: 500px;
+                                transition: ease 0.7s;
+                              }
+
+                              .J1.active,.L1.active,.S1.active,.G1.active,
+                              .J2.active,.L2.active,.S2.active,.G2.active,
+                              .J3.active,.L3.active,.S3.active,.G3.active,
+                              .J4.active,.L4.active,.S4.active,.G4.active,
+                              .J5.active,.L5.active,.S5.active,.G5.active{
+                                color: var(--darkModeText);
+                                background-color: var(--darkerBlue);
+                                opacity: 1;
+                                padding: 20px;
+                                position: absolute;
+                                min-width: 320px;
+                                max-width: 360px;
+                                min-height: 500px;
+                                border: none;
+                                border-radius: 10px;
+                                left: 0em;
+                                transition: ease 0.7s;
+                              }
+                          .sub__title{
+                                color: var(--lightblue);
+                                font-size: large;
+                                white-space: normal ;
+                              }
+
+                            .J1,.L1,.S1,.G1{
+                                order: 5;
+                              }
+                              .J2,.L2,.S2,.G2{
+                                order: 4;
+                              }
+                              .J3,.L3,.S3,.G3{
+                                order: 3;
+                              }
+                              .J4,.L4,.S4,.G4{
+                                order: 2;
+                              }
+                              .J5,.L5,.S5,.G5{
+                                order: 1;
+                              }
+
+
+                              /* Sun Moon Icon */
+                              .sun {
+                                display: block;
+                                position: absolute;
+                                top: -40px;
+                                left: 87%;
+                                right: 12%;
+                                margin: 0;
+                                padding: 0;
+                                cursor: pointer;
+                                z-index: 9;
+                              }
+
+                              .mary,
+                              .roses {
+                                display: block;
+                              }
+
+                              .mary {
+                                width: 100%;
+                                grid-area: ls;
+                                justify-self: self-end;
+                              }
+
+                              .roses {
+                                width: 100%;
+                                grid-area: rs;
+                                justify-self: left;
+                              }
+
+                              nav {
+                                display: flex;
+                                width: 75%;
+                                height: fit-content;
+                                margin: 70px auto;
+                                position: relative;
+                                flex-direction: row;
+                                justify-content: space-between;
+                              }
+
+                              .menu-ul {
+                                width: 100%;
+                                height: fit-content;
+                                list-style: none;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: right;
+                                right: 2rem;
+                              }
+
+                              .menu-ul li a {
+                                padding-left: 3rem;
+                                letter-spacing: 1px;
+                              }
+
+                              .home a:hover,
+                              .list-li a:hover,
+                              .list-li a:active {
+                                color: rgb(26, 176, 226);
+                              }
+
+                               .title {
+                      position: absolute;
+                      align-items: center;
+                      justify-self: center;
+                      top: 0px;
+                      left: 40px;
+                    }
+
+                              .hamburger {
+                                display: none;
+                                margin: unset;
+                                padding: unset;
+                                position: absolute;
+                              }
+
+                      .textLight {
+                      margin: -25px auto;
+                      max-width: 360px;
+                      justify-self: center;
+                      height: 103%;
+                    }
+                              
+        #counters-and-buttons-container{
+              left: 27%;
+              margin-top: 0;
+              position: relative;
+            }
+
+            #counters-and-buttons-container.active{
+              left: 27%;
+              margin-top: 0;
+              position: relative;
+            }
+
+            #counters-container,
+            #buttons-container {
+            position: absolute;
+            transition: all 0.35;
+            left: 20px;
+            top: 50%;
+            } 
+
+
+                    /*........ The BIG 0 number .......*/
+            #beads {
+              position: absolute;
+              top: -85px;
+              left: 40px;
+              font-size: 1.8rem;
+              font-weight: 700;
+              color: var(--rose);
+              order: 3;
+              transform: translate(-50%, -105%);
+              background-color: black;
+              width: fit-content;
+              border: none;
+              border-radius: 3px;
+              transition: ease-in-out 0.3s;
+              padding: 0 3px;
+            }
+
+            /* Button */
+            #beads-plus {
+              position: relative;
+              background-color: var(--rose);
+              left: 10%;
+              top: -190px;
+              order: 1;
+              color: var(--white);
+              transform: scale(1.1)
+            }
+
+            /* Button */
+            #beads-plus::before {
+              content: "+";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -105%);
+              font-weight: 900;
+              font-size: large;
+            }
+
+            #beads-plus:hover,
+            #beads-plus:active {
+              background-color: var(--darkblue);
+              color: var(--faderose);
+              transition: all 0.3s;
+            }
+
+             /* Whole Button */
+            #decades {
+              font-size: 1.8rem;
+              font-weight: 700;
+              color: var(--lighterblue);
+              padding: 0 3px;
+              text-align: center;
+              top: -40px;
+              left: 40px;
+              transform: translate(-50%, -50%);
+              order: 2;
+              border: none;
+              border-radius: 3px;
+              transition: ease-in-out 0.3s;
+              width: fit-content;
+              background-color: black;
+            }
+
+            /* ...  Underneath Text  */
+            #decades__bottom{
+              position: absolute;
+              left: 15px;
+              top: -20px;
+              font-size: 0.8rem;
+              color: var(--rose);
+            }
+
+              /* BUTTON */
+            #rosaries {
+              position: absolute;
+              top: 40px;
+              left: 40px;
+              padding: 0 3px;
+              transform: translate(-50%, -50%);
+              font-size: 1.8rem;
+              font-weight: 700;
+              color: var(--lightrose);
+              order: 1;
+              background: none;
+              border: none;
+              transition: ease-in-out 0.3s;
+              border-radius: 3px;
+              width: fit-content;
+              background-color: black;
+            }
+
+            /* ...  Underneath Text  */
+            #rosaries__bottom {
+              position: absolute;
+              left: 15px;
+              top: 60px;
+              font-size: 0.8rem;
+              color: var(--rose);
+            }
+
+            #beads-plus,
+            #reset-btn {
+              font-weight: 200;
+              width: 50px;
+              height: 50px;
+              border-radius: 50px;
+              font-size: 0.8rem;
+              transition: ease-in-out 0.3s;
+            }
+
+            #reset-btn {
+              order: 3;
+              position: relative;
+              left: 12%;
+              top: 50px;
+              background-color: var(--lightblue);
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            }
+
+            #reset-btn:hover,
+            #reset-btn:active {
+              background-color: var(--darkblue);
+              color: var(--lighterblue);
+              transition: all 0.3s;
+            }
+          }
+/* _________________ END OF MAX 634px ________________ */
+                  

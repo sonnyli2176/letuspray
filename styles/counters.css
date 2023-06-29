@@ -1,0 +1,103 @@
+#counters-and-buttons-container {
+  position: relative;
+  width: fit-content;
+  height: auto;
+  z-index: 9;
+  transition: all 0.5s;
+}
+
+
+#counters-container,
+#buttons-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 25em 0 0 16em;
+}
+
+#beads-minus,
+#beads-plus {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 88px;
+  height: 30px;
+  letter-spacing: 1px;
+  padding: 0 5px;
+  border-radius: 0.7rem;
+  border: none;
+  color: var(--white);
+  background-color: var(--darkblue);
+}
+
+#beads-minus,
+#beads-plus,
+#reset-btn {
+  margin: 0 5px;
+  }
+
+#beads-minus:hover:active {
+box-shadow: 0px 0px 10px rgba(100, 183, 251, 0.8);
+
+  }
+
+#beads-plus:hover:active {
+box-shadow: 0px 0px 10px rgba(100, 183, 251, 0.8);
+
+  }
+
+#reset-btn:hover:active {
+box-shadow: 0px 0px 10px rgba(100, 183, 251, 0.8);
+
+  }
+
+#reset-btn {
+  font-size: 0.8rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 88px;
+  height: 30px;
+  letter-spacing: 1px;
+  padding: 0 3px;
+  border-radius: 0.7rem;
+  border: none;
+  color: var(--white);
+  background-color: var(--lightblue);
+}
+
+/* 0 */
+#beads {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--offwhite);
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* WHOLE BUTTON */
+#decades {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--offwhite);
+  padding: 0 30px;
+}
+
+/* WHOLE BUTTON */
+#rosaries {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--offwhite);
+}
+
