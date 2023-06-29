@@ -36,28 +36,24 @@ function updateDisplay() {
   beadsDisplay.innerText = beads;
   decadesDisplay.innerText = decades;
   rosariesDisplay.innerText = rosaries;
-};
+}
 
 let mystery = [];
 let mysteryOrigin = mystery.slice();
 let extraText = "";
 
-
-
-
-
 // DISPLAY SELECTED MYSTERIES BUTTON MODE
 function MysteriesMessage(joyfulBtn, mysteriesMessage) {
   const button = joyfulBtn;
-       let timeoutId;
-          button.addEventListener("click", () => {
-            mysteriesMessage.classList.add("active");
-  
-          clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          mysteriesMessage.classList.remove('active');
-        }, 3000);
-        });
+  let timeoutId;
+  button.addEventListener("click", () => {
+    mysteriesMessage.classList.add("active");
+
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      mysteriesMessage.classList.remove("active");
+    }, 3000);
+  });
 }
 
 // CHECK PREFERRABLE BROWSER MESSAGE
@@ -74,27 +70,21 @@ function MysteriesMessage(joyfulBtn, mysteriesMessage) {
 //     browserMessage.classList.remove('active');
 //   }, 6000);
 
-
-
-
 MysteriesMessage(joyfulBtn, mysteriesMessage);
 MysteriesMessage(lightBtn, mysteriesMessage);
-MysteriesMessage(sorrowfulBtn,  mysteriesMessage);
+MysteriesMessage(sorrowfulBtn, mysteriesMessage);
 MysteriesMessage(gloriousBtn, mysteriesMessage);
 
 let AllButtons = [joyfulBtn, lightBtn, sorrowfulBtn, gloriousBtn];
 
-AllButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    counterContainer.classList.toggle('active')
-  }
-  )
+AllButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    counterContainer.classList.add("active");
+  });
 });
 
-
-
 class Mysteries {
-  constructor(joy, lit, sor, glo,mystery) {
+  constructor(joy, lit, sor, glo, mystery) {
     this.joy = joyfulClass;
     this.lit = lightClass;
     this.sor = sorrowClass;
@@ -106,69 +96,67 @@ class Mysteries {
   getJoyActive() {
     this.joy.forEach((j) => {
       j.classList;
-      mystery.push(j)
+      mystery.push(j);
     });
   }
 
-      //   // DEACTIVE JOY
-      DeactivateActiveJoy() {
-        this.joy.forEach((j) => {
-          j.classList.remove("active");
-        })
-      };
-
-    //   // GET ACTIVE LIGHT
-    getLightActive() {
-      this.lit.forEach((l) => {
-        l.classList;
-        mystery.push(l)
-      })
-    };
-
-    //   // DEACTIVATE LIGHT 
-      DeactivateLight() {
-        this.lit.forEach((l) => {
-          l.classList.remove("active");
-        });
-      }
-
-    //   // GET ACTIVE SORROW
-      getSorrowActive() {
-        this.sor.forEach((s) => {
-          s.classList;
-          mystery.push(s)
-        });
-      };
-
-    //   // DEACTIVE SORROW
-      DeactivateSorrow() {
-        this.sor.forEach((s) => {
-          s.classList.remove("active");
-        });
-      }
-
-    //   // GET ACTIVE GLORIOUS
-      getGloriousActive() {
-        this.glo.forEach((g) => {
-          g.classList;
-          mystery.push(g)
-        });
+  //   // DEACTIVE JOY
+  DeactivateActiveJoy() {
+    this.joy.forEach((j) => {
+      j.classList.remove("active");
+    });
   }
-  
-    //   // DEACTIVATE GLORIOUS
+
+  //   // GET ACTIVE LIGHT
+  getLightActive() {
+    this.lit.forEach((l) => {
+      l.classList;
+      mystery.push(l);
+    });
+  }
+
+  //   // DEACTIVATE LIGHT
+  DeactivateLight() {
+    this.lit.forEach((l) => {
+      l.classList.remove("active");
+    });
+  }
+
+  //   // GET ACTIVE SORROW
+  getSorrowActive() {
+    this.sor.forEach((s) => {
+      s.classList;
+      mystery.push(s);
+    });
+  }
+
+  //   // DEACTIVE SORROW
+  DeactivateSorrow() {
+    this.sor.forEach((s) => {
+      s.classList.remove("active");
+    });
+  }
+
+  //   // GET ACTIVE GLORIOUS
+  getGloriousActive() {
+    this.glo.forEach((g) => {
+      g.classList;
+      mystery.push(g);
+    });
+  }
+
+  //   // DEACTIVATE GLORIOUS
   DeactivateGlorious() {
     this.glo.forEach((g) => {
       g.classList.remove("active");
     });
   }
-  };
+}
 
-const joyActive = new Mysteries('joy');
-const lightActive = new Mysteries('lit');
-const sorrowActive = new Mysteries('sor');
-const gloriousActive = new Mysteries('glo');
-
-
+const joyActive = new Mysteries("joy");
+const lightActive = new Mysteries("lit");
+const sorrowActive = new Mysteries("sor");
+const gloriousActive = new Mysteries("glo");
 
 joyfulBtn.addEventListener("click", () => {
   mystery.length = 0;
@@ -178,86 +166,79 @@ joyfulBtn.addEventListener("click", () => {
 lightBtn.addEventListener("click", () => {
   mystery.length = 0;
   lightActive.getLightActive(mysteryOrigin);
-
 });
-  
+
 sorrowfulBtn.addEventListener("click", () => {
   mystery.length = 0;
   sorrowActive.getSorrowActive(mysteryOrigin);
-
 });
 
-
 gloriousBtn.addEventListener("click", () => {
-mystery.length = 0;
-  gloriousActive.getGloriousActive(mysteryOrigin); 
-
+  mystery.length = 0;
+  gloriousActive.getGloriousActive(mysteryOrigin);
 });
 
 // Increment count
 function incrementCount() {
-    beads++;
-        if (beads % 10 === 0) {
-             decades++;
-              if (decades === 5) {
-            decades = 0;
-          rosaries++;
-      }
-   }
-     if (beads === 50) {
-       beads = 0;
-      }
-               updateDisplay();
-            localStorage.setItem("beadsStored", beads);
-          localStorage.setItem("decadesStored", decades);
-       localStorage.setItem("rosariesStored", rosaries);
+  beads++;
+  if (beads % 10 === 0) {
+    decades++;
+    if (decades === 5) {
+      decades = 0;
+      rosaries++;
     }
+  }
+  if (beads === 50) {
+    beads = 0;
+  }
+  updateDisplay();
+  localStorage.setItem("beadsStored", beads);
+  localStorage.setItem("decadesStored", decades);
+  localStorage.setItem("rosariesStored", rosaries);
+}
 
 nextBtn.addEventListener("click", function () {
   incrementCount();
-  
- if (beads <= 10) {
-        mystery[0].classList.add('active')
-  }
-  if (beads > 10) {   
-        mystery[0].classList.remove('active');
-        mystery[1].classList.add("active");
-      }
-  if (beads > 20) {
-          mystery[1].classList.remove("active");
-          mystery[2].classList.add("active");
-        }
-        if (beads > 30) {
-          mystery[2].classList.remove("active");
-          mystery[3].classList.add("active");
-        }
-        if (beads > 40) {
-          mystery[3].classList.remove("active");
-          mystery[4].classList.add("active");
-        }
-  if (beads === 50 || beads === 0) {
-          mystery[4].classList.remove('active');
-          mystery[3].classList.remove('active');
-          mystery[2].classList.remove('active');
-          mystery[1].classList.remove('active');
-          mystery[0].classList.remove('active');
 
-          updateDisplay();
-        }
+  if (beads <= 10) {
+    mystery[0].classList.add("active");
+  }
+  if (beads > 10) {
+    mystery[0].classList.remove("active");
+    mystery[1].classList.add("active");
+  }
+  if (beads > 20) {
+    mystery[1].classList.remove("active");
+    mystery[2].classList.add("active");
+  }
+  if (beads > 30) {
+    mystery[2].classList.remove("active");
+    mystery[3].classList.add("active");
+  }
+  if (beads > 40) {
+    mystery[3].classList.remove("active");
+    mystery[4].classList.add("active");
+  }
+  if (beads === 50 || beads === 0) {
+    mystery[4].classList.remove("active");
+    mystery[3].classList.remove("active");
+    mystery[2].classList.remove("active");
+    mystery[1].classList.remove("active");
+    mystery[0].classList.remove("active");
+
+    updateDisplay();
+  }
 });
 
-
-
-
-  resetBtn.addEventListener('click', () => {
-    return (
-      (beads = 0),
-      (decades = 0),
-      (rosaries = 0),
-      joyActive.DeactivateActiveJoy(),
-      lightActive.DeactivateLight(),
-      sorrowActive.DeactivateSorrow(),
-      gloriousActive.DeactivateGlorious(),
-      updateDisplay()
-    );
-  });
+resetBtn.addEventListener("click", () => {
+  return (
+    (beads = 0),
+    (decades = 0),
+    (rosaries = 0),
+    joyActive.DeactivateActiveJoy(),
+    lightActive.DeactivateLight(),
+    sorrowActive.DeactivateSorrow(),
+    gloriousActive.DeactivateGlorious(),
+    updateDisplay()
+  );
+});
