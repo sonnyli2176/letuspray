@@ -32,7 +32,6 @@
 
           body{
             touch-action: pan-y;
-            touch-action: pan-left;
           }
 
  /* Browser message */
