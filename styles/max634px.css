@@ -208,18 +208,57 @@
                                 padding: 20px 55px 20px 20px;
                                 position: absolute;
                                 min-width: 320px;
-                                max-width: 360px;
+                                max-width: 340px;
                                 min-height: 100dvh;
                                 border: none;
                                 border-radius: 10px;
                                 left: 0em;
                                 transition: ease 0.7s;
                               }
-       
-       .sub__title{
+    
+    
+        .sub__title{
+          position: relative;
+          top: 1em;
             color: var(--lightblue);
             font-size: large;
           }
+
+        .sub__title + p{
+          padding-top: 2em;
+        }
+ 
+        .Gethsemane  {
+          display: block;
+          position: absolute;
+          top: 25em;
+        }
+
+             .Scourging{
+          display: block;
+          position: absolute;
+          top: 10em;
+        }
+             .crownThorn{
+          display: block;
+          position: absolute;
+          top: 20em;
+        }
+
+        .JesusCarry{
+          display: block;
+          position: absolute;
+          top: 16em;
+        }
+       
+    
+      .Crucified{
+          display: block;
+          position: absolute;
+          top: 27em;
+        }
+       
+   
 
          .J1,.L1,.S1,.G1{
             order: 5;
@@ -237,9 +276,7 @@
             order: 1;
           }
 
-.sub__title + p{
-  padding-top: 15px;
-}
+
 
         div.gridContent {
             z-index: 0;
