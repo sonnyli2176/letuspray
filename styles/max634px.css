@@ -38,11 +38,13 @@
 #chromeBrowser{
   display: none;
   position: fixed;
+  width: 35px;
+  height: 2em;
   color: var(--rose);
   margin: 0;
   min-width: 430px;
   padding: 5px 10px;
-  top: 0;
+  top: -1em;
   left: 2em;
   background-color: #000000;
   border-radius: 5px;
@@ -54,16 +56,20 @@
 #chromeBrowser.active{
   display: block;
   position: fixed;
+  width: 35px;
+  height: 2em;
   color: var(--rose);
   background-color: #000000;
   margin: 0;
   min-width: 430px;
-  padding: 5px 10px;
-  top: 0;
-  left: 0.5em;
-  border-radius: 5px;
+  padding: 25px 10px;
+  top: -1em;
+  left: -35px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   text-align: center;
   z-index: 99;
+  transform: scale(0.8);
 }
 
           /* POP UP MSG */
@@ -165,7 +171,7 @@
                               #Sorrowful__Mysteries,
                               #The__Glorious__Mysteries{
                                 position: absolute;
-                                top: 5dvh;
+                                top: 4.7dvh;
                                 bottom: 100px;
                                 min-width: 320px;
                                 width: 340px;
@@ -203,7 +209,7 @@
                                 position: absolute;
                                 min-width: 320px;
                                 max-width: 360px;
-                                min-height: 500px;
+                                min-height: 100dvh;
                                 border: none;
                                 border-radius: 10px;
                                 left: 0em;

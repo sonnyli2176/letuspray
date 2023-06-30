@@ -40,7 +40,6 @@ function updateDisplay() {
 
 let mystery = [];
 let mysteryOrigin = mystery.slice();
-let extraText = "";
 
 // DISPLAY SELECTED MYSTERIES BUTTON MODE
 function MysteriesMessage(joyfulBtn, mysteriesMessage) {
@@ -57,18 +56,23 @@ function MysteriesMessage(joyfulBtn, mysteriesMessage) {
 }
 
 // CHECK PREFERRABLE BROWSER MESSAGE
-// const browserMessage = document.getElementById('chromeBrowser');
-// let browserID;
-// if (!navigator.userAgent.includes('Chrome'),{
-//   browserID :browserMessage.classList.add('active')
-// }){(()=> browserID)()}
+const browserMessage = document.getElementById('chromeBrowser');
+let browserBrands = ['Safari', 'Mozilla', 'Trident', 'MSIE', 'Edge', 'Chrome', 'Opera', 'Samsung'];
+let result, ua = navigator.userAgent;
+[browserBrands].forEach((result) => {
+  if (ua.indexOf(browserBrands !== 'Chrome')) {
+    console.log(browserMessage.classList.add('active'));
+  } else {
+    console.log(browserMessage.classList.remove("active"));
+  }
+});
 
-// let browserCheck;
-//   clearTimeout(browserCheck);
+let browserCheck;
+  clearTimeout(browserCheck);
 
-// browserCheck = setTimeout(() => {
-//     browserMessage.classList.remove('active');
-//   }, 6000);
+browserCheck = setTimeout(() => {
+    browserMessage.classList.remove('active');
+  }, 6000);
 
 MysteriesMessage(joyfulBtn, mysteriesMessage);
 MysteriesMessage(lightBtn, mysteriesMessage);
@@ -77,11 +81,26 @@ MysteriesMessage(gloriousBtn, mysteriesMessage);
 
 let AllButtons = [joyfulBtn, lightBtn, sorrowfulBtn, gloriousBtn];
 
+let InActivities = 180000;
+let TimeOutId;
+
+function closeContainer() {
+  counterContainer.classList.remove('active');
+};
+
+function resetTimeout() {
+  clearTimeout(TimeOutId);
+  TimeOutId = setTimeout(closeContainer, InActivities);
+}
+
 AllButtons.forEach((button) => {
   button.addEventListener("click", () => {
     counterContainer.classList.add("active");
   });
 });
+
+counterContainer.addEventListener("mousemove", resetTimeout);
+resetTimeout();
 
 class Mysteries {
   constructor(joy, lit, sor, glo, mystery) {
