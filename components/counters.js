@@ -69,12 +69,9 @@ let browserBrands = [
 let ua = navigator.userAgent;
 
 browserBrands.forEach((brand) => {
-  if (ua.indexOf(brand) === -1 || ua.indexOf("Chrome") === -1) {
+  if (ua.indexOf(brand) !== -1 && ua.indexOf('Chrome') !== -1) {
     browserMessage.classList.add("active");
-  } else {
-    browserMessage.classList.remove("active");
-  }
-});
+  }});
 
 let browserCheck;
 clearTimeout(browserCheck);
@@ -105,7 +102,7 @@ function resetTimeout() {
 
 AllButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    counterContainer.classList.toggle("active");
+    counterContainer.classList.add("active");
   });
 });
 
