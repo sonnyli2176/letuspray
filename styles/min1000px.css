@@ -3,6 +3,31 @@
  @media screen and (min-width: 1000px) {
 
 
+          .gridContent {
+            display: grid;
+            top: 0;
+            margin: 0px;
+            width: 100%;
+            height: 100dvh;
+            position: absolute;
+            justify-content: center;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            grid-template-columns: 1fr 360px 360px 1fr;
+            grid-template-rows: 60px 260dvh auto;
+            grid-template-areas:
+              ". title title ."
+              "ls content content rs"
+              "ls footer footer rs";
+            z-index: 0;
+          }
+          .textLight, .textDark {
+            grid-area: 1/2;
+            height: 260vh;
+            top: 72px;
+          }
+
             /* POP UP MSG */
           .pop_up_msg{
             position: fixed;
@@ -19,19 +44,34 @@
             position: fixed;
             color: var(--green-popMsg);
             z-index: 9;
-            top: 180px;
-            left: 47%;
+            top: 190px;
+            left: 33%;
             font-size: small;
             display: block;
             transition: ease 0.5s;
           }
 
            #Mysteries_Container{
-            grid-area: content;
             position: relative;
             left: -8.4em;
             width: 635px;
+            width: 360px;
+            z-index: 0;
           }
+
+          .joyfulBtn{
+            z-index: 3;
+          }
+
+          #the__mysteries__mode{
+            top: 2em;
+            z-index: 999;
+          }
+
+          .signCross{
+            top: -3em;
+          }
+
           .The__kingdom__of__God {
             white-space: normal;
           }
@@ -45,7 +85,7 @@
                                 min-width: 320px;
                                 max-width: 100%;
                                 text-align: center;
-                              }
+                            }
                           
                               .J1,.L1,.S1,.G1,
                               .J2,.L2,.S2,.G2,
@@ -59,11 +99,13 @@
                                 opacity: 0;
                                 padding: 20px;
                                 border: none;
-                                border-radius: 10px;
+                                border-radius: 25px;
                                 min-width: 320px;
                                 max-width: 360px;
-                                min-height: 500px;
+                                height: 260vh;
+                                left: 370px;
                                 transition: ease 0.7s;
+                                top: -105px;
                               }
 
                               .J1.active,.L1.active,.S1.active,.G1.active,
@@ -78,11 +120,12 @@
                                 position: absolute;
                                 min-width: 320px;
                                 max-width: 360px;
-                                min-height: 100dvh;
+                                height: 260vh;
                                 border: none;
-                                border-radius: 10px;
-                                left: 0em;
+                                border-radius: 25px;
+                                left: 370px;
                                 transition: ease 0.7s;
+                                display: block;
                               }
                           
                           .sub__title{
@@ -111,11 +154,11 @@
                               .menu-ul {
                                   right: 1rem;
                               }
-                                .menu-ul li a {
+                              .menu-ul li a {
                                   letter-spacing: 1px;
                               }
                               
-#counters-and-buttons-container{
+            #counters-and-buttons-container{
               left: 35%;
               margin-top: 0;
               position: relative;

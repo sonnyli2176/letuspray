@@ -124,10 +124,10 @@
                                 opacity: 0;
                                 padding: 20px ;
                                 border: none;
-                                border-radius: 10px;
+                                border-radius: 25px;
                                 min-width: 320px;
                                 max-width: 360px;
-                                min-height: 500px;
+                                height: 253vh;
                                 transition: ease 0.7s;
                               }
 
@@ -143,9 +143,9 @@
                                 position: absolute;
                                 min-width: 320px;
                                 max-width: 360px;
-                                min-height: 100dvh;
+                                height: 253vh;
                                 border: none;
-                                border-radius: 10px;
+                                border-radius: 25px;
                                 left: 0em;
                                 transition: ease 0.7s;
                               }
