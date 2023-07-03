@@ -13,7 +13,7 @@
                     background-position: center center;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    grid-template-columns: 1fr 320px 1fr;
+                    grid-template-columns: 1fr 360px 1fr;
                     grid-template-rows: 60px 260dvh auto;
                     grid-template-areas:
                       ". title ."
@@ -67,7 +67,7 @@
             color: var(--green-popMsg);
             z-index: 9;
             top: 170px;
-            left: 45%;
+            left: 40%;
             font-size: small;
             display: block;
             transition: ease 0.5s;
@@ -128,7 +128,7 @@
                               #Sorrowful__Mysteries,
                               #The__Glorious__Mysteries{
                                 position: absolute;
-                                top: 8dvh;
+                                top: 7dvh;
                                 bottom: 100px;
                                 min-width: 320px;
                                 text-align: center;
@@ -150,7 +150,7 @@
                                 border-radius: 25px;
                                 min-width: 320px;
                                 width: 359px;
-                                height: 253vh;
+                                height: 305vh;
                                 transition: ease 0.7s;
                               }
 
@@ -166,7 +166,7 @@
                                 position: absolute;
                                 min-width: 320px;
                                 max-width: 360px;
-                                height: 253vh;
+                                height: 305dvh;
                                 border: none;
                                 border-radius: 25px;
                                 left: 0em;
@@ -355,8 +355,8 @@
                     .sun {
                       display: block;
                       position: absolute;
-                      top: -65px;
-                      left: 85%;
+                      top: -40px;
+                      left: 90%;
                       right: 12%;
                       margin: 0;
                       padding: 0;
@@ -364,11 +364,11 @@
                       z-index: 9;
                     }
 
-                    .textLight {
+                    .textLight, .textDark {
                       margin: -25px auto;
-                      max-width: 360px;
+                      width: 360px;
                       justify-self: center;
-                      height: 103%;
+                      height: 320dvh;
                     }
 
                     .title {
@@ -449,23 +449,21 @@
                     }
 
 #counters-and-buttons-container{
-              left: 35%;
-              margin-top: 0;
+              display: block;
+              margin: 0;
+              top: 22em;
+              left: 380px;
               position: relative;
-            }
-
-            #counters-and-buttons-container.active{
-              left: 35%;
-              margin-top: 0;
-              position: relative;
+              z-index: 999;
             }
 
             #counters-container,
             #buttons-container {
             position: absolute;
             transition: all 0.35;
-            left: 20px;
             top: 50%;
+            z-index: 999;
+            margin: 0;
             } 
 
                     /*........ The BIG 0 number .......*/

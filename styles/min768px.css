@@ -1,33 +1,54 @@
 
 
-  /* ==============================Styles for min-width: 768px ====================================*/
-                            @media screen and (min-width: 768px) {
-                              .gridContent {
-                                display: grid;
-                                top: 0;
-                                margin: 0px;
-                                width: 100%;
-                                height: 100dvh;
-                                position: absolute;
-                                justify-content: center;
-                                background-position: center center;
-                                background-size: cover;
-                                background-repeat: no-repeat;
-                                grid-template-columns: 1fr 320px 1fr;
-                                grid-template-rows: 60px 260dvh auto;
-                                grid-template-areas:
-                                  ". title ."
-                                  "ls content rs"
-                                  "ls footer rs";
-                                z-index: 0;
-                              }
+ /* =========================Min-width 635px ==========================*/
+                @media screen and (min-width: 768px) {
+                  .gridContent {
+                    display: grid;
+                    top: 0;
+                    margin: 0px auto 0;
+                    max-width: 100%;
+                    height: 100dvh;
+                    position: absolute;
+                    justify-content: center;
+                    background-position: center center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    grid-template-columns: 1fr 360px 1fr;
+                    grid-template-rows: 60px 260dvh auto;
+                    grid-template-areas:
+                      ". title ."
+                      "ls content rs"
+                      "ls footer rs";
+                    z-index: 0;
+                  }
 
-            #Mysteries_Container{
-            grid-area: content;
-            position: absolute;
-            left: 80%;
-            top: 10px;
-          }
+
+                  .signCross{
+                    top: -70px;
+                  }
+
+
+                     /* ....  THE BUTTONS MYSTERIES SELECTION  ... */
+                     #the__mysteries__mode{
+                      width: 80%;
+                      margin: 0 45px;
+                      z-index: 999;
+                      top: 30px;
+                     }
+
+                     
+/* Browser message */
+#chromeBrowser{
+  display: none;
+  position: fixed;
+  color: var(--rose);
+  margin: 0 35%;
+  min-width: 430px;
+  padding: 5px 10px;
+  top: 0;
+  background-color: #000000;
+  border-radius: 5px;
+  text-align: center;}
 
            /* POP UP MSG */
           .pop_up_msg{
@@ -35,7 +56,7 @@
             color: var(--green-popMsg);
             z-index: 9;
             top: 150px;
-            left: 35%;
+            left: 45%;
             font-size: small;
             display: none;
             transition: ease 0.5s;
@@ -45,8 +66,8 @@
             position: fixed;
             color: var(--green-popMsg);
             z-index: 9;
-            top: 180px;
-            left: 47%;            
+            top: 170px;
+            left: 40%;
             font-size: small;
             display: block;
             transition: ease 0.5s;
@@ -93,23 +114,25 @@
             cursor: pointer;
             box-shadow: 0 0 7px 1px var(--lightblue);
             }
-           #Mysteries_Container{
+
+          #Mysteries_Container{
             grid-area: content;
             position: relative;
             left: -8.4em;
             width: 635px;
-            top: 25px;
-          }
+            top: 25px;         
+           }
 
                               #Joyful__Mysteries,
                               #Mysteries__of__Light,
                               #Sorrowful__Mysteries,
                               #The__Glorious__Mysteries{
                                 position: absolute;
+                                top: 7dvh;
                                 bottom: 100px;
                                 min-width: 320px;
-                                max-width: 100%;
                                 text-align: center;
+                                z-index: 5;
                               }
                           
                               .J1,.L1,.S1,.G1,
@@ -122,12 +145,12 @@
                                 color: var(--darkModeText);
                                 background-color: var(--darkerBlue);
                                 opacity: 0;
-                                padding: 20px ;
+                                padding: 20px;
                                 border: none;
                                 border-radius: 25px;
                                 min-width: 320px;
-                                max-width: 360px;
-                                height: 253vh;
+                                width: 359px;
+                                height: 305vh;
                                 transition: ease 0.7s;
                               }
 
@@ -143,97 +166,200 @@
                                 position: absolute;
                                 min-width: 320px;
                                 max-width: 360px;
-                                height: 253vh;
+                                height: 305dvh;
                                 border: none;
                                 border-radius: 25px;
                                 left: 0em;
                                 transition: ease 0.7s;
                               }
-                          .sub__title{
-                                color: var(--lightblue);
-                                font-size: large;
-                                white-space: normal ;
-                              }
-
-                            .J1,.L1,.S1,.G1{
-                                order: 5;
-                              }
-                              .J2,.L2,.S2,.G2{
-                                order: 4;
-                              }
-                              .J3,.L3,.S3,.G3{
-                                order: 3;
-                              }
-                              .J4,.L4,.S4,.G4{
-                                order: 2;
-                              }
-                              .J5,.L5,.S5,.G5{
-                                order: 1;
-                              }
 
 
-                              /* Sun Moon Icon */
-                              .sun {
-                                display: block;
-                                position: absolute;
-                                top: -40px;
-                                left: 87%;
-                                right: 12%;
-                                margin: 0;
-                                padding: 0;
-                                cursor: pointer;
-                                z-index: 9;
-                              }
+         .J1,.L1,.S1,.G1{
+            order: 5;
+          }
+          .J2,.L2,.S2,.G2{
+            order: 4;
+          }
+          .J3,.L3,.S3,.G3{
+            order: 3;
+          }
+          .J4,.L4,.S4,.G4{
+            order: 2;
+          }
+          .J5,.L5,.S5,.G5{
+            order: 1;
+          }
 
-                              .mary,
-                              .roses {
-                                display: block;
-                              }
 
-                              .mary {
-                                width: 100%;
-                                grid-area: ls;
-                                justify-self: self-end;
-                              }
+                            
+                  .sub__title{
+                        color: var(--lightblue);
+                        font-size: large;
+                      }
 
-                              .roses {
-                                width: 100%;
-                                grid-area: rs;
-                                justify-self: left;
-                              }
+                      .sub__title{
+                      position: relative;
+                      top: 1em;
+                      color: var(--lightblue);
+                      font-size: large;
+                    }
 
-                              nav {
-                                display: flex;
-                                width: 75%;
-                                height: fit-content;
-                                margin: 70px auto;
-                                position: relative;
-                                flex-direction: row;
-                                justify-content: space-between;
-                              }
+                  .sub__title + p{
+                      padding-top: 2em;
+                    }
+            
+/* ------------------------------------------------- */
+        .Gabriel{
+          display: block;
+          position: absolute;
+          top: 13.5em;
+        }
 
-                              .menu-ul {
-                                width: 100%;
-                                height: fit-content;
-                                list-style: none;
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: right;
-                                right: 2rem;
-                              }
+        .Visitation{
+          display: block;
+          position: absolute;
+          top: 18.5em;
+        }
 
-                              .menu-ul li a {
-                                padding-left: 3rem;
-                                letter-spacing: 1px;
-                              }
+          .Manger{
+          display: block;
+          position: absolute;
+          top: 28em;
+        }
+       
+        .Presentation{
+          display: block;
+          position: absolute;
+          top: 22.5em;
+        }
 
-                              .home a:hover,
-                              .list-li a:hover,
-                              .list-li a:active {
-                                color: rgb(26, 176, 226);
-                              }
+        .Found{
+          display: block;
+          position: absolute;
+          top: 21em;
+        }
 
-                               .title {
+        /* ---------------------------------------- */
+        .Baptismal{
+          display: block;
+          position: absolute;
+          top: 16em;
+        }
+      
+        .Cana{
+          display: block;
+          position: absolute;
+          top: 18.5em;
+        }
+
+        .Repent{
+          display: block;
+          position: absolute;
+          top: 12em;
+        }
+        .Transfiguration{
+          display: block;
+          position: absolute;
+          top: 14.5em;
+        }
+        .theEucharist{
+          display: block;
+          position: absolute;
+          top: 11em;
+        }
+
+        /* ----------------------------------------------- */
+        .Gethsemane  {
+          display: block;
+          position: absolute;
+          top: 21em;
+          width:315px;
+        }
+
+        .Scourging{
+          display: block;
+          position: absolute;
+          top: 10em;
+          width:315px;
+
+        }
+        .crownThorn{
+          display: block;
+          position: absolute;
+          top: 17em;
+          width:315px;
+        }
+
+        .JesusCarry{
+          display: block;
+          position: absolute;
+          top: 15em;
+          width:315px;
+        }
+       
+    
+       .Crucified{
+          display: block;
+          position: absolute;
+          top: 23em;
+          width:315px;
+        }
+       
+        /* ------------------------------------------------ */
+       .theResurrection{
+          display: block;
+          position: absolute;
+          top: 22.5em;
+        }
+        .theAscension{
+          display: block;
+          position: absolute;
+          top: 10.5em;
+        }
+
+        .theHolySpirit{
+          display: block;
+          position: absolute;
+          top: 20em;
+        }
+        .theAssumption{
+          display: block;
+          position: absolute;
+          top: 10.5em;
+        }
+
+        .QueenofHeaven{
+          display: block;
+          position: absolute;
+          top: 13em;
+        }
+
+        .mystery img{
+          display: block;
+          position: absolute;
+          width:315px;
+        }
+        div.gridContent {
+            z-index: 0;
+          }
+
+                 
+
+                    #wrapper {
+                      margin: 0 1rem;
+                      position: absolute;
+                      top: 2em;
+                    }
+
+
+                    .textLight, .textDark {
+                      margin: -25px auto;
+                      width: 360px;
+                      justify-self: center;
+                      height: 320dvh;
+                    }
+
+                    .title {
                       position: absolute;
                       align-items: center;
                       justify-self: center;
@@ -241,40 +367,89 @@
                       left: 40px;
                     }
 
-                              .hamburger {
-                                display: none;
-                                margin: unset;
-                                padding: unset;
-                                position: absolute;
-                              }
-
-                      .textLight {
-                      margin: -25px auto;
-                      max-width: 360px;
-                      justify-self: center;
-                      height: 103%;
+                    .mary,
+                    .roses {
+                      display: block;
+                      z-index: -1;
+                      transition: 0.5s;
+                      min-width: 200px;
                     }
-                              
-        #counters-and-buttons-container{
-              left: 35%;
-              margin-top: 0;
-              position: relative;
-            }
 
-            #counters-and-buttons-container.active{
-              left: 35%;
-              margin-top: 0;
+                    .mary {
+                      grid-area: ls;
+                      justify-self: self-end;
+                    }
+
+                    .roses {
+                      grid-area: rs;
+                      justify-self: left;
+                    }
+
+                    .home {
+                      position: absolute;
+                    }
+
+                    nav {
+                      display: flex;
+                      width: 80%;
+                      height: fit-content;
+                      margin: 70px auto;
+                      position: relative;
+                      flex-direction: row;
+                      justify-content: space-between;
+                    }
+
+                    .menu-ul {
+                      display: flex;
+                      flex-direction: row;
+                      width: 100%;
+                      height: fit-content;
+                      list-style: none;
+                      justify-content: right;
+                      right: 0rem;
+                    }
+
+                    .menu-ul li a {
+                      padding-left: 3rem;
+                      letter-spacing: 1px;
+                      right: 2rem;
+                    }
+
+                    .home {
+                      left: 2rem;
+                    }
+
+                    .clickLink {
+                      position: relative;
+                      width: 290px;
+                      height: 30px;
+                      top: -20px;
+                      font-size: 1rem;
+                    }
+
+                    .link {
+                      text-decoration: none;
+                      color: var(--lightblue);
+                      margin: 0;
+                    }
+
+#counters-and-buttons-container{
+              display: block;
+              margin: 0;
+              top: 22em;
+              left: 380px;
               position: relative;
+              z-index: 999;
             }
 
             #counters-container,
             #buttons-container {
             position: absolute;
             transition: all 0.35;
-            left: 20px;
             top: 50%;
+            z-index: 999;
+            margin: 0;
             } 
-
 
                     /*........ The BIG 0 number .......*/
             #beads {

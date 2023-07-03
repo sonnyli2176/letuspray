@@ -9,13 +9,24 @@
 
 
 
+@media screen and (max-width: 550px)  {
+
+ .roses,.mary{
+  opacity: 0;
+  transition: all 0.7s;
+ }
+
+   
+
+}
+
 /* ==============   screen and (max-width: 634px)   ======================= */
         @media screen and (max-width: 634px)  {
           .gridContent {
             display: grid;
             position: absolute;
-            top: 10px;
-            margin: 0;
+            top: -10px;
+            margin-top: 5em;
             max-width: 634px;
             height: 100dvh;
             justify-content: center;
@@ -88,7 +99,7 @@
             position: fixed;
             color: var(--green-popMsg);
             z-index: 9;
-            top: 120px;
+            top: 135px;
             left: 30%;
             font-size: small;
             display: block;
@@ -163,15 +174,14 @@
             max-width: 380px;
             left: -10px;
             z-index: 0;
-            top: 2em;
-          }
-
+            top: 1.8em;
+          }    
                               #Joyful__Mysteries,
                               #Mysteries__of__Light,
                               #Sorrowful__Mysteries,
                               #The__Glorious__Mysteries{
                                 position: absolute;
-                                top: 4.7dvh;
+                                top: 4dvh;
                                 bottom: 100px;
                                 min-width: 320px;
                                 width: 340px;
@@ -192,8 +202,8 @@
                                 border: none;
                                 border-radius: 25px;
                                 min-width: 320px;
-                                max-width: 360px;
-                                height: 230vh;
+                                max-width: 340px;
+                                height: 317vh;
                                 transition: ease 0.7s;
                               }
 
@@ -209,7 +219,7 @@
                                 position: absolute;
                                 min-width: 320px;
                                 max-width: 340px;
-                                height: 230vh;
+                                height: 317vh;
                                 border: none;
                                 border-radius: 25px;
                                 left: 0em;
@@ -369,27 +379,10 @@
 
         div.gridContent {
             z-index: 0;
+            margin-top: 10%;
           }
+     
 
-/*           
-          @keyframes saidRosary {
-            0% {
-              opacity: 1;
-              transform: scale(0.5);
-            }
-            50% {
-              opacity: 0.5;
-              transform: scale(1.5);
-            }
-            100% {
-              opacity: 0;
-              transform: scale(2) rotate(25deg);
-            }
-              }
-
-            #saidRosary {
-              animation: saidRosary 7s ease-in-out;
-              } */
 
             .mary {
               width: 100%;
@@ -646,7 +639,7 @@
             /* ==================================================== */
             .title {
               position: absolute;
-              top: 10px;
+              top: -15px;
               justify-self: center;
               padding: 0 auto;
               z-index: 1;
@@ -658,17 +651,17 @@
             
             .textLight {
               position: absolute;
-              top: 10px;
+              top: 0px;
               width: 340px;
               justify-self: center;
-              height: 240vh;
+              height: 330vh;
               overflow: hidden;
               z-index: 0;
             }
 
       
             #counters-and-buttons-container{
-              left: 30%;
+              left: 380px;
               margin-top: 0;
               position: relative;
             }
