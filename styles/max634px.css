@@ -238,125 +238,127 @@
           padding-top: 2em;
         }
  
-        .Gabriel{
+
+
+       .Gabriel{
           display: block;
           position: absolute;
-          top: 14.5em;
-        }
+          top: 13.5em;
+          z-index: 0;
+        } 
 
         .Visitation{
-          display: block;
-          position: absolute;
-          top: 21em;
-        }
-
-          .Manger{
-          display: block;
-          position: absolute;
-          top: 32em;
-        }
-       
-        .Presentation{
-          display: block;
-          position: absolute;
-          top: 28em;
-        }
-
-        .Found{
-          display: block;
-          position: absolute;
-          top: 27em;
-        }
-
-      .Baptismal{
-          display: block;
-          position: absolute;
-          top: 17em;
-        }
-      
-        .Cana{
-          display: block;
-          position: absolute;
-          top: 21em;
-        }
-
-        .Repent{
-          display: block;
-          position: absolute;
-          top: 12em;
-        }
-        .Transfiguration{
-          display: block;
-          position: absolute;
-          top: 16em;
-        }
-        .theEucharist{
-          display: block;
-          position: absolute;
-          top: 13em;
-        }
-   
-        /* ------------------------------------------- */
-        .theResurrection{
-          display: block;
-          position: absolute;
-          top: 25em;
-        }
-        .theAscension{
-          display: block;
-          position: absolute;
-          top: 12em;
-        }
-
-        .theHolySpirit{
-          display: block;
-          position: absolute;
-          top: 22.5em;
-        }
-        .theAssumption{
-          display: block;
-          position: absolute;
-          top: 10.5em;
-        }
-
-        .QueenofHeaven{
-          display: block;
-          position: absolute;
-          top: 14.5em;
-        }
-
-
-
-        .Gethsemane  {
-          display: block;
-          position: absolute;
-          top: 25em;
-        }
-
-        .Scourging{
-          display: block;
-          position: absolute;
-          top: 10em;
-        }
-             .crownThorn{
           display: block;
           position: absolute;
           top: 20em;
         }
 
-        .JesusCarry{
+          .Manger{
           display: block;
           position: absolute;
-          top: 16em;
+          top: 31em;
         }
        
-    
-      .Crucified{
+        .Presentation{
           display: block;
           position: absolute;
           top: 27em;
         }
+
+        .Found{
+          display: block;
+          position: absolute;
+          top: 26em;
+        }
+
+      .Baptismal{
+          display: block;
+          position: absolute;
+          top: 16em;
+        }
+      
+        .Cana{
+          display: block;
+          position: absolute;
+          top: 20em;
+        }
+
+        .Repent{
+          display: block;
+          position: absolute;
+          top: 10.8em;
+        }
+        .Transfiguration{
+          display: block;
+          position: absolute;
+          top: 14.7em;
+        }
+        .theEucharist{
+          display: block;
+          position: absolute;
+          top: 12em;
+        }
+   
+
+
+        .Gethsemane  {
+          display: block;
+          position: absolute;
+          top: 24em;
+        }
+
+        .Scourging{
+          display: block;
+          position: absolute;
+          top: 9.5em;
+        }
+        .crownThorn{
+          display: block;
+          position: absolute;
+          top: 19em;
+        }
+
+        .JesusCarry{
+          display: block;
+          position: absolute;
+          top: 14.5em;
+        }
        
+          .Crucified{
+          display: block;
+          position: absolute;
+          top: 25.5em;
+        }
+       
+
+        .theResurrection{
+          display: block;
+          position: absolute;
+          top: 24em;
+        }
+        .theAscension{
+          display: block;
+          position: absolute;
+          top: 11em;
+        }
+
+        .theHolySpirit{
+          display: block;
+          position: absolute;
+          top: 21.5em;
+        }
+        .theAssumption{
+          display: block;
+          position: absolute;
+          top: 9.5em;
+        }
+
+        .QueenofHeaven{
+          display: block;
+          position: absolute;
+          top: 13.5em;
+        }
+
    
 
          .J1,.L1,.S1,.G1{
@@ -639,7 +641,7 @@
             /* ==================================================== */
             .title {
               position: absolute;
-              top: -15px;
+              top: 0px;
               justify-self: center;
               padding: 0 auto;
               z-index: 1;
@@ -670,6 +672,7 @@
               left: 0;
               margin-top: 0;
               position: relative;
+              top: -30px;
             }
 
             #counters-container,
