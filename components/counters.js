@@ -57,23 +57,22 @@ function MysteriesMessage(joyfulBtn, mysteriesMessage) {
 
 const browserMessage = document.getElementById("chromeBrowser");
 let userAgent = navigator.userAgent;
-let browser;
-if (userAgent.match(/chrome/i)) {
-  browser = "chrome";
+ 
+if (userAgent.match(/edge|edg/i)) {
+  browserMessage.classList.add('active');
+} else if (userAgent.match(/firefox|mozilla|fxios/i)) {
+browserMessage.classList.add("active");
+} else if (userAgent.match(/opr/i)) {
+browserMessage.classList.add("active");
+} else if (userAgent.match(/safari/i)) {
+browserMessage.classList.add("active");
 } else {
-  browserMessage.classList.add("active");
+browserMessage.classList.remove("active");
 }
-
-
-
-
-
-clearTimeout(browser);
-
-browser = setTimeout(() => {
+clearTimeout(userAgent);
+userAgent = setTimeout(() => {
   browserMessage.classList.remove("active");
 }, 6000);
-
 
 MysteriesMessage(joyfulBtn, mysteriesMessage);
 MysteriesMessage(lightBtn, mysteriesMessage);
