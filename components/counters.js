@@ -55,24 +55,34 @@ function MysteriesMessage(joyfulBtn, mysteriesMessage) {
   });
 }
 
-const browserMessage = document.getElementById("chromeBrowser");
-let userAgent = navigator.userAgent;
- 
-if (userAgent.match(/edge|edg/i)) {
-  browserMessage.classList.add('active');
-} else if (userAgent.match(/firefox|mozilla|fxios/i)) {
-browserMessage.classList.add("active");
-} else if (userAgent.match(/opr/i)) {
-browserMessage.classList.add("active");
-} else if (userAgent.match(/safari/i)) {
-browserMessage.classList.add("active");
-} else {
-browserMessage.classList.remove("active");
-}
-clearTimeout(userAgent);
-userAgent = setTimeout(() => {
-  browserMessage.classList.remove("active");
-}, 6000);
+// const browserMessage = document.getElementById("chromeBrowser");
+      
+// let uA = navigator.userAgent;
+// let browser;
+// let browserList = [
+//   {
+//     name: ('firefox' , 'Firefox'), value: 'firefox'
+//   },
+//   { name: 'Opera', value: 'OPR' },
+//   { 
+//     name: 'Edge' || 'Edg' || 'edge', value: 'Edge'
+//   },
+//     {name: 'Safari', value: 'Safari'}
+// ]
+
+// for (let i in browserList) {
+//   if (browserList[i].name.some(name => uA.match(name))) {
+//     browserMessage.classList.add("active");
+//     break;
+//       } else {
+//     browserMessage.classList.remove("active");
+//   }
+// }
+
+// clearTimeout(uA);
+// uA = setTimeout(() => {
+//   browserMessage.classList.remove("active");
+// }, 6000);
 
 MysteriesMessage(joyfulBtn, mysteriesMessage);
 MysteriesMessage(lightBtn, mysteriesMessage);
