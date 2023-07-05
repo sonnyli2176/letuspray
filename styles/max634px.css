@@ -45,6 +45,9 @@
             touch-action: pan-y;
           }
 
+
+
+
  /* Browser message */
 #chromeBrowser{
   display: none;
@@ -176,57 +179,82 @@
             z-index: 0;
             top: 1.8em;
           }    
-                              #Joyful__Mysteries,
-                              #Mysteries__of__Light,
-                              #Sorrowful__Mysteries,
-                              #The__Glorious__Mysteries{
-                                position: absolute;
-                                top: 4dvh;
-                                bottom: 100px;
-                                min-width: 320px;
-                                width: 340px;
-                                text-align: center;
-                              }
-                          
-                              .J1,.L1,.S1,.G1,
-                              .J2,.L2,.S2,.G2,
-                              .J3,.L3,.S3,.G3,
-                              .J4,.L4,.S4,.G4,
-                              .J5,.L5,.S5,.G5{
-                                position: absolute;
-                                margin-left: 0em;
-                                color: var(--darkModeText);
-                                background-color: var(--darkerBlue);
-                                opacity: 0;
-                                padding: 20px 85px 20px 20px;
-                                border: none;
-                                border-radius: 25px;
-                                min-width: 320px;
-                                max-width: 340px;
-                                height: 317vh;
-                                transition: ease 0.7s;
-                              }
+                #Joyful__Mysteries,
+                #Mysteries__of__Light,
+                #Sorrowful__Mysteries,
+                #The__Glorious__Mysteries{
+                  position: absolute;
+                  top: 4dvh;
+                  bottom: 100px;
+                  min-width: 320px;
+                  width: 340px;
+                  text-align: center;
+                }
+            
+                .J1,.L1,.S1,.G1,
+                .J2,.L2,.S2,.G2,
+                .J3,.L3,.S3,.G3,
+                .J4,.L4,.S4,.G4,
+                .J5,.L5,.S5,.G5{
+                  position: absolute;
+                  margin-left: 0em;
+                  color: var(--darkModeText);
+                  /* background-color: var(--darkerBlue); */
+                  opacity: 0;
+                  padding: 20px 85px 20px 20px;
+                  border: none;
+                  border-radius: 25px;
+                  min-width: 320px;
+                  max-width: 340px;
+                  height: 317vh;
+                  transition: ease 0.7s;
+                }
 
-                              .J1.active,.L1.active,.S1.active,.G1.active,
-                              .J2.active,.L2.active,.S2.active,.G2.active,
-                              .J3.active,.L3.active,.S3.active,.G3.active,
-                              .J4.active,.L4.active,.S4.active,.G4.active,
-                              .J5.active,.L5.active,.S5.active,.G5.active{
-                                color: var(--darkModeText);
-                                background-color: var(--darkerBlue);
-                                opacity: 1;
-                                padding: 20px 55px 20px 20px;
-                                position: absolute;
-                                min-width: 320px;
-                                max-width: 340px;
-                                height: 317vh;
-                                border: none;
-                                border-radius: 25px;
-                                left: 0em;
-                                transition: ease 0.7s;
-                              }
-    
-    
+                .J1.active,.L1.active,.S1.active,.G1.active,
+                .J2.active,.L2.active,.S2.active,.G2.active,
+                .J3.active,.L3.active,.S3.active,.G3.active,
+                .J4.active,.L4.active,.S4.active,.G4.active,
+                .J5.active,.L5.active,.S5.active,.G5.active{
+                  color: var(--darkModeText);
+                  opacity: 1;
+                  padding: 20px 55px 20px 20px;
+                  position: absolute;
+                  min-width: 320px;
+                  max-width: 340px;
+                  height: 317vh;
+                  border: none;
+                  border-radius: 25px;
+                  left: 0;
+                  transition: ease 0.7s;
+                }
+                /* Para Div Text */
+                .mystery .Para {
+                  z-index: 1;
+                  padding-top: 5em;
+                }
+                /* Mystery Image Active */
+                .IM{
+                  position: absolute;
+                  top: -200px;
+                  left: -3px;
+                  z-index: -1;
+                }
+                /* Mystery Background Colour Active */
+                .bg{
+                  top: 0dvh;
+                  opacity: 1;
+                  position: absolute;
+                  min-width: 320px;
+                  width: 340px;
+                  height: 317vh;
+                  border: none;
+                  border-radius: 25px;
+                  left: 0;
+                  background-color: var(--darkerBlue);
+                  transition: ease 0.7s;
+                  z-index: -2;
+                }
+   
         .sub__title{
           position: relative;
           top: 1em;
@@ -376,7 +404,6 @@
           .J5,.L5,.S5,.G5{
             order: 1;
           }
-
 
 
         div.gridContent {
