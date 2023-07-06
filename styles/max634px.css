@@ -228,9 +228,9 @@
                   transition: ease 0.7s;
                 }
                 /* Para Div Text */
-                .mystery .Para {
+                .mystery p {
                   z-index: 1;
-                  padding-top: 5em;
+                  padding-top: 1em;
                 }
                 /* Mystery Image Active */
                 .IM{
@@ -241,7 +241,7 @@
                 }
                 /* Mystery Background Colour Active */
                 .bg{
-                  top: 0dvh;
+                  top: -15px;
                   opacity: 1;
                   position: absolute;
                   min-width: 320px;
@@ -257,46 +257,40 @@
    
         .sub__title{
           position: relative;
-          top: 1em;
+          top: -5px;
           color: var(--lightblue);
           font-size: large;
         }
 
-        .sub__title + p{
-          padding-top: 2em;
-        }
- 
-
-
        .Gabriel{
           display: block;
           position: absolute;
-          top: 13.5em;
+          top: 0em;
           z-index: 0;
         } 
 
         .Visitation{
           display: block;
           position: absolute;
-          top: 20em;
+          top: 10px;
         }
 
           .Manger{
           display: block;
           position: absolute;
-          top: 31em;
+          top: 0px;
         }
        
         .Presentation{
           display: block;
           position: absolute;
-          top: 27em;
+          top: 0em;
         }
 
         .Found{
           display: block;
           position: absolute;
-          top: 26em;
+          top: 0em;
         }
 
       .Baptismal{
