@@ -276,6 +276,7 @@
           top: 10px;
         }
 
+     
           .Manger{
           display: block;
           position: absolute;
@@ -328,59 +329,59 @@
         .Gethsemane  {
           display: block;
           position: absolute;
-          top: 24em;
+          top: 0em;
         }
 
         .Scourging{
           display: block;
           position: absolute;
-          top: 9.5em;
+          top: 0;
         }
         .crownThorn{
           display: block;
           position: absolute;
-          top: 19em;
+          top: 0em;
         }
 
         .JesusCarry{
           display: block;
           position: absolute;
-          top: 14.5em;
+          top: 0em;
         }
        
           .Crucified{
           display: block;
           position: absolute;
-          top: 25.5em;
+          top: 0em;
         }
        
 
         .theResurrection{
           display: block;
           position: absolute;
-          top: 24em;
+          top: 0;
         }
         .theAscension{
           display: block;
           position: absolute;
-          top: 11em;
+          top: 0;
         }
 
         .theHolySpirit{
           display: block;
           position: absolute;
-          top: 21.5em;
+          top:0;
         }
         .theAssumption{
           display: block;
           position: absolute;
-          top: 9.5em;
+          top: 0;
         }
 
         .QueenofHeaven{
           display: block;
           position: absolute;
-          top: 13.5em;
+          top: 0em;
         }
 
    
