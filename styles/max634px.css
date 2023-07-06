@@ -262,6 +262,7 @@
           font-size: large;
         }
 
+        /* THE JOYFUL MYSTERIES */
        .Gabriel{
           display: block;
           position: absolute;
@@ -293,32 +294,33 @@
           top: 0em;
         }
 
+        /* THE MYSTERIES OF LIGHT */
       .Baptismal{
           display: block;
           position: absolute;
-          top: 16em;
+          top: 0em;
         }
       
         .Cana{
           display: block;
           position: absolute;
-          top: 20em;
+          top: 0em;
         }
 
         .Repent{
           display: block;
           position: absolute;
-          top: 10.8em;
+          top: 0em;
         }
         .Transfiguration{
           display: block;
           position: absolute;
-          top: 14.7em;
+          top: 0em;
         }
         .theEucharist{
           display: block;
           position: absolute;
-          top: 12em;
+          top: 0em;
         }
    
 
