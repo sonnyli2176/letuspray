@@ -46,6 +46,23 @@
           }
 
 
+                    .Mary_Heading,
+                    .Mary_Heading360,
+                    .Mary_Heading600,
+                    .Mary_Heading720
+                    {
+                      display: none;
+                    }
+
+                    .Mary_Heading340{
+                    grid-area: title;
+                    position: relative;
+                    margin-left: 0px;
+                    justify-self: center;
+                    top: -35px;
+                    z-index: -1;
+                    width: 340px;
+                  }
 
 
  /* Browser message */
@@ -63,7 +80,7 @@
   background-color: #000000;
   border-radius: 5px;
   text-align: center;
-  z-index: 99;
+  z-index: 0;
 }
 
 /* Browser message */
@@ -82,7 +99,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   text-align: center;
-  z-index: 99;
+  z-index: 0;
   transform: scale(0.8);
 }
 
@@ -90,9 +107,9 @@
           .pop_up_msg{
             position: fixed;
             color: var(--green-popMsg);
-            z-index: 9;
-            top: 100px;
-            left: 38%;
+            z-index: 2;
+            top: 50px;
+            left: 0%;
             font-size: small;
             display: none;
             transition: ease 0.5s;
@@ -101,8 +118,8 @@
           .pop_up_msg.active{
             position: fixed;
             color: var(--green-popMsg);
-            z-index: 9;
-            top: 135px;
+            z-index: 1;
+            top: 215px;
             left: 30%;
             font-size: small;
             display: block;
@@ -113,7 +130,7 @@
             #the__mysteries__mode{
             display: flex;
             position: absolute;
-            z-index: 999;
+            z-index: 2;
             background-color: none;
             min-width: 340px;
             max-width: 360px;
@@ -145,7 +162,7 @@
             letter-spacing: 1px;
             margin: 0;
             cursor: pointer;
-            z-index: 999;
+            z-index: 9;
             }
 
           .joyful_btn:hover ,
@@ -167,7 +184,7 @@
             margin: 0;
             cursor: pointer;
             box-shadow: 0 0 7px 1px var(--lightblue);
-            z-index: 999;
+            z-index: 9;
             }
 
             #Mysteries_Container{
@@ -176,8 +193,8 @@
             min-width: 320px;
             max-width: 380px;
             left: -10px;
-            z-index: 0;
-            top: 1.8em;
+            z-index: 1;
+            top: 110px;
           }    
                 #Joyful__Mysteries,
                 #Mysteries__of__Light,
@@ -199,7 +216,6 @@
                   position: absolute;
                   margin-left: 0em;
                   color: var(--darkModeText);
-                  /* background-color: var(--darkerBlue); */
                   opacity: 0;
                   padding: 20px 85px 20px 20px;
                   border: none;
@@ -208,6 +224,7 @@
                   max-width: 340px;
                   height: 317vh;
                   transition: ease 0.7s;
+                  z-index: 2;
                 }
 
                 .J1.active,.L1.active,.S1.active,.G1.active,
@@ -227,6 +244,7 @@
                   left: 0;
                   transition: ease 0.7s;
                 }
+
                 /* Para Div Text */
                 .mystery p {
                   z-index: 1;
@@ -246,7 +264,7 @@
                   position: absolute;
                   min-width: 320px;
                   width: 340px;
-                  height: 317vh;
+                  height: 321dvh;
                   border: none;
                   border-radius: 25px;
                   left: 0;
@@ -280,19 +298,19 @@
           .Manger{
           display: block;
           position: absolute;
-          top: 0px;
+          top: 120px;
         }
        
         .Presentation{
           display: block;
           position: absolute;
-          top: 0em;
+          top: 340px;
         }
 
         .Found{
           display: block;
           position: absolute;
-          top: 0em;
+          top: 250px;
         }
 
         /* THE MYSTERIES OF LIGHT */
@@ -305,7 +323,7 @@
         .Cana{
           display: block;
           position: absolute;
-          top: 0em;
+          top: 250px;
         }
 
         .Repent{
@@ -313,10 +331,11 @@
           position: absolute;
           top: 0em;
         }
+
         .Transfiguration{
           display: block;
           position: absolute;
-          top: 0em;
+          top: 85px;
         }
         .theEucharist{
           display: block;
@@ -359,7 +378,7 @@
         .theResurrection{
           display: block;
           position: absolute;
-          top: 0;
+          top: 200px;
         }
         .theAscension{
           display: block;
@@ -370,7 +389,7 @@
         .theHolySpirit{
           display: block;
           position: absolute;
-          top:0;
+          top:150px;
         }
         .theAssumption{
           display: block;
@@ -381,7 +400,7 @@
         .QueenofHeaven{
           display: block;
           position: absolute;
-          top: 0em;
+          top: 100px;
         }
 
    
@@ -665,10 +684,10 @@
             /* ==================================================== */
             .title {
               position: absolute;
-              top: 0px;
+              top: 93px;
               justify-self: center;
               padding: 0 auto;
-              z-index: 1;
+              z-index: 3;
             }
 
             .start{
@@ -677,35 +696,35 @@
             
             .textLight {
               position: absolute;
-              top: 0px;
+              top: 93px;
               width: 340px;
               justify-self: center;
               height: 330vh;
               overflow: hidden;
-              z-index: 0;
+              z-index: 1;
             }
 
       
             #counters-and-buttons-container{
-              left: 380px;
-              margin-top: 0;
+              left: 100%;
+              margin-top: 0px;
               position: relative;
+              z-index: 2;
             }
 
             #counters-and-buttons-container.active{
-              left: 0;
-              margin-top: 0;
+              left: -310px;
+              margin-top: 0px;
               position: relative;
-              top: -30px;
+              top: 50px;
+              z-index: 2;
             }
 
             #counters-container,
             #buttons-container {
             position: absolute;
             transition: all 0.35;
-            left: 20px;
-            top: 50%;
-            }
+             }
 
             /*........ The BIG 0 number .......*/
             #beads {

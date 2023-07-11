@@ -231,22 +231,32 @@ nextBtn.addEventListener("click", function () {
 
   if (beads <= 10) {
     mystery[0].classList.add("active");
+        updateDisplay();
+
   }
   if (beads > 10) {
     mystery[0].classList.remove("active");
     mystery[1].classList.add("active");
+        updateDisplay();
+
   }
   if (beads > 20) {
     mystery[1].classList.remove("active");
     mystery[2].classList.add("active");
+        updateDisplay();
+
   }
   if (beads > 30) {
     mystery[2].classList.remove("active");
     mystery[3].classList.add("active");
+        updateDisplay();
+
   }
   if (beads > 40) {
     mystery[3].classList.remove("active");
     mystery[4].classList.add("active");
+        updateDisplay();
+
   }
   if (beads === 50 || beads === 0) {
     mystery[4].classList.remove("active");

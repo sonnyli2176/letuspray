@@ -63,7 +63,7 @@
             #the__mysteries__mode{
             display: flex;
             position: relative;
-            z-index: 0;
+            z-index: 999;
             background-color: none;
             min-width: 340px;
             max-width: 360px;
@@ -199,7 +199,7 @@ header {
   width: 100%;
   height: auto;
   position: relative;
-  z-index: 1;
+  z-index: 9;
 }
 
 .hamburger {
@@ -221,6 +221,7 @@ nav {
   padding: 0;
   box-sizing: border-box;
   position: relative;
+  z-index: 9;
 }
 
 .menu-ul {

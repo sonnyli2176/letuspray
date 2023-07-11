@@ -3,7 +3,7 @@
                 @media (min-width: 768px)and (max-width: 999px) {
                   .gridContent {
                     display: grid;
-                    top: 0;
+                    top: 10px;
                     margin: 0px auto 0;
                     max-width: 100%;
                     height: 100dvh;
@@ -12,7 +12,7 @@
                     background-position: center center;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    grid-template-columns: 1fr 360px 1fr;
+                    grid-template-columns: 1fr 600px 1fr;
                     grid-template-rows: 60px 260dvh auto;
                     grid-template-areas:
                       ". title ."
@@ -21,18 +21,36 @@
                     z-index: 0;
                   }
 
+                    .Mary_Heading,
+                    .Mary_Heading360,
+                    .Mary_Heading340,
+                    .Mary_Heading720{
+                      display: none;
+                    }
+
+                    .Mary_Heading600{
+                    display: block;
+                    grid-area: title;
+                    position: absolute;
+                    justify-self: center;
+                    top: 0px;
+                    z-index: -1;
+                  }
+
 
                   .signCross{
-                    top: -70px;
+                    top: -30px;
                   }
 
 
                      /* ....  THE BUTTONS MYSTERIES SELECTION  ... */
-                     #the__mysteries__mode{
-                      width: 80%;
+                  #the__mysteries__mode{
+                      width: 100%;
                       margin: 0 45px;
                       z-index: 999;
-                      top: 30px;
+                      top: 50px;
+                      left: 25%;
+                      scale: 1.3;
                      }
 
                      
@@ -65,7 +83,7 @@
             position: fixed;
             color: var(--green-popMsg);
             z-index: 9;
-            top: 170px;
+            top: 330px;
             left: 40%;
             font-size: small;
             display: block;
@@ -78,101 +96,127 @@
           .glorious_btn {
             display: flex;
             position: relative;
-            justify-content: space-between;
-            width: 200px;
+            justify-content: space-evenly; 
+            width: 400px;
             height: 45px;
-            padding: 5px;
-            left: -50px;
+            padding: 5px 10px 40px;
+            left: -80px;
             top: -15px;
             border-radius: 10px;
             background: none;
             border: none;
             color: inherit;
-            transform: scale(0.8);
+            transform: scale(1);
             letter-spacing: 1px;
             margin: 0;
             cursor: pointer;
             }
 
-          .joyful_btn:hover ,
+
+          .joyful_btn:hover.joyful_btn:hover ,
           .light_btn:hover ,
           .sorrowful_btn:hover ,
-          .glorious_btn:hover {
+          .glorious_btn:hover{
+            display: flex;
             position: relative;
-            justify-content: space-around;
-            width: 200px;
+            justify-content: space-evenly;
+            width: 400px;
             height: 45px;
-            padding: 5px;
-            left: -50px;
+            padding: 5px 10px 40px;
+            left: -80px;
             top: -15px;
             border-radius: 10px;
-            color: var(--lighterblue);
-            transform: scale(0.8);
+            background: var(--darkerBlue);
+            border: none;
+            color: white;
+            transform: scale(1);
             letter-spacing: 1px;
             margin: 0;
             cursor: pointer;
             box-shadow: 0 0 7px 1px var(--lightblue);
             }
 
-          #Mysteries_Container{
+                        /* Mystery Background Colour Active */
+                .bg{
+                  top: -15px;
+                  opacity: 1;
+                  position: absolute;
+                  min-width: 320px;
+                  width: 600px;
+                  height: 299vh;
+                  border: none;
+                  border-radius: 25px;
+                  left: -135px;
+                  background-color: var(--darkerBlue);
+                  transition: ease 0.7s;
+                  z-index: -2;
+                }
+   
+
+      #Mysteries_Container{
             grid-area: content;
             position: relative;
-            left: -8.4em;
-            width: 635px;
-            top: 25px;         
+            left: 0px;
+            width: 600px;
+            top: 185px; 
+            z-index: 1;
+            height: 299vh;
            }
 
-                              #Joyful__Mysteries,
-                              #Mysteries__of__Light,
-                              #Sorrowful__Mysteries,
-                              #The__Glorious__Mysteries{
-                                position: absolute;
-                                top: 7dvh;
-                                bottom: 100px;
-                                min-width: 320px;
-                                text-align: center;
-                                z-index: 5;
-                              }
-                          
-                              .J1,.L1,.S1,.G1,
-                              .J2,.L2,.S2,.G2,
-                              .J3,.L3,.S3,.G3,
-                              .J4,.L4,.S4,.G4,
-                              .J5,.L5,.S5,.G5{
-                                position: absolute;
-                                margin-left: 8.4em;
-                                color: var(--darkModeText);
-                                background-color: var(--darkerBlue);
-                                opacity: 0;
-                                padding: 20px;
-                                border: none;
-                                border-radius: 25px;
-                                min-width: 320px;
-                                width: 359px;
-                                height: 305vh;
-                                transition: ease 0.7s;
+            #Joyful__Mysteries,
+            #Mysteries__of__Light,
+            #Sorrowful__Mysteries,
+            #The__Glorious__Mysteries{
+              position: absolute;
+              top: 7dvh;
+              bottom: 100px;
+              width: 600px;
+              height: 299vh;
+              text-align: center;
+              z-index: 0;
+
+            }
+        
+            .J1,.L1,.S1,.G1,
+            .J2,.L2,.S2,.G2,
+            .J3,.L3,.S3,.G3,
+            .J4,.L4,.S4,.G4,
+            .J5,.L5,.S5,.G5{
+              position: absolute;
+              margin-left: 8.4em;
+              color: var(--darkModeText);
+              opacity: 0;
+              padding: 20px;
+              border: none;
+              border-radius: 25px;
+              min-width: 320px;
+              width: 600px;
+              height: 299vh;
+              transition: ease 0.7s;
+              
+            }
+
+            .J1.active,.L1.active,.S1.active,.G1.active,
+            .J2.active,.L2.active,.S2.active,.G2.active,
+            .J3.active,.L3.active,.S3.active,.G3.active,
+            .J4.active,.L4.active,.S4.active,.G4.active,
+            .J5.active,.L5.active,.S5.active,.G5.active{
+              color: var(--darkModeText);
+              /* background-color: var(--darkerBlue); */
+              opacity: 1;
+              padding: 20px;
+              position: absolute;
+              /* min-width: 320px; */
+              width: 600px;
+              height: 295dvh;
+              border: none;
+              border-radius: 25px;
+              left: 0em;
+              transition: ease 0.7s;
+
                               }
 
-                              .J1.active,.L1.active,.S1.active,.G1.active,
-                              .J2.active,.L2.active,.S2.active,.G2.active,
-                              .J3.active,.L3.active,.S3.active,.G3.active,
-                              .J4.active,.L4.active,.S4.active,.G4.active,
-                              .J5.active,.L5.active,.S5.active,.G5.active{
-                                color: var(--darkModeText);
-                                background-color: var(--darkerBlue);
-                                opacity: 1;
-                                padding: 20px;
-                                position: absolute;
-                                min-width: 320px;
-                                max-width: 360px;
-                                height: 305dvh;
-                                border: none;
-                                border-radius: 25px;
-                                left: 0em;
-                                transition: ease 0.7s;
-                              }
-
-
+                             
          .J1,.L1,.S1,.G1{
             order: 5;
           }
@@ -189,30 +233,35 @@
             order: 1;
           }
 
-
-                            
-                  .sub__title{
-                        color: var(--lightblue);
-                        font-size: large;
-                      }
-
+                
+                           
                       .sub__title{
                       position: relative;
                       top: 1em;
                       color: var(--lightblue);
                       font-size: large;
+                      left: 135px;
                     }
 
-                  .sub__title + p{
+                     .sub__title + p{
                       padding-top: 2em;
                     }
             
+                    .mystery .IM{
+                    top: -2em;
+                    left: -130px;
+                    }
+
+                    .mystery p{
+                    top: -2em;
+                    margin-left: 170px;
+                    width: 250px;
+                    }
 /* ------------------------------------------------- */
         .Gabriel{
           display: block;
           position: absolute;
-          top: 13.5em;
-        }
+       }
 
         .Visitation{
           display: block;
@@ -229,86 +278,87 @@
         .Presentation{
           display: block;
           position: absolute;
-          top: 22.5em;
+          margin-top: 180px;
         }
 
         .Found{
           display: block;
           position: absolute;
-          top: 21em;
+          margin-top: 10em;
         }
 
         /* ---------------------------------------- */
         .Baptismal{
           display: block;
           position: absolute;
-          top: 16em;
+          margin-top: 2em;
         }
       
         .Cana{
-          display: block;
           position: absolute;
-          top: 18.5em;
-        }
+          margin-top: 4em;
+          left: -130px;        }
 
         .Repent{
           display: block;
           position: absolute;
-          top: 12em;
+          margin-top: 2em;
         }
+
         .Transfiguration{
           display: block;
           position: absolute;
-          top: 14.5em;
+          margin-top: 1em;
         }
         .theEucharist{
           display: block;
           position: absolute;
-          top: 11em;
+          margin-top: 1em;
         }
 
         /* ----------------------------------------------- */
         .Gethsemane  {
           display: block;
           position: absolute;
-          top: 21em;
-          width:315px;
+          margin-top: 2em;
+          margin-left: 0em;
         }
 
         .Scourging{
           display: block;
           position: absolute;
-          top: 10em;
-          width:315px;
+          margin-top: 2em;
+          margin-left: 1em;
 
         }
         .crownThorn{
           display: block;
           position: absolute;
-          top: 17em;
-          width:315px;
+          margin-top: 2em;
+          margin-left: 0em;
+
         }
 
         .JesusCarry{
           display: block;
           position: absolute;
-          top: 15em;
-          width:315px;
+          margin-top: 2em;
+          margin-left: 0em;
         }
        
     
        .Crucified{
           display: block;
           position: absolute;
-          top: 23em;
-          width:315px;
+          margin-top: 3em;
+          margin-left: 0em;
         }
        
         /* ------------------------------------------------ */
        .theResurrection{
           display: block;
           position: absolute;
-          top: 22.5em;
+          margin-top: 4em;
         }
         .theAscension{
           display: block;
@@ -319,25 +369,29 @@
         .theHolySpirit{
           display: block;
           position: absolute;
-          top: 20em;
+          margin-top: -4em;
         }
         .theAssumption{
           display: block;
           position: absolute;
-          top: 10.5em;
+          margin-top: -3em;
+        }
+        .The__crowning__Queen__of__Heaven{
+         position: absolute;
+         width: 250px;
+         margin-left: 3em;
+        }
+       .fifth__message{
+          margin-top: 2em;
         }
 
         .QueenofHeaven{
           display: block;
           position: absolute;
-          top: 13em;
+          margin-top: 4em;
         }
 
-        .mystery img{
-          display: block;
-          position: absolute;
-          width:315px;
-        }
+ 
         div.gridContent {
             z-index: 0;
           }
@@ -352,31 +406,37 @@
 
 
                     .textLight, .textDark {
-                      margin: -25px auto;
-                      width: 360px;
+                      top: 35px;
+                      margin: 46px auto;
+                      width: 600px;
                       justify-self: center;
                       height: 320dvh;
+                       z-index: 0;
                     }
 
                     .title {
                       position: absolute;
                       align-items: center;
                       justify-self: center;
-                      top: 0px;
-                      left: 40px;
+                      left: 26%;                      
+                      top: 98px;
+                      font-size: 4rem;
+                      z-index: 1;
+
                     }
+
 
                     .mary,
                     .roses {
                       display: block;
                       z-index: -1;
                       transition: 0.5s;
-                      min-width: 200px;
+                      min-width: 80px;
                     }
 
                     .mary {
                       grid-area: ls;
-                      justify-self: self-end;
+                      justify-self: right;
                     }
 
                     .roses {
@@ -436,9 +496,9 @@
               display: block;
               margin: 0;
               top: 22em;
-              left: 380px;
+              left: 615px;
               position: relative;
-              z-index: 999;
+              z-index: 8;
             }
 
             #counters-container,
@@ -446,7 +506,7 @@
             position: absolute;
             transition: all 0.35;
             top: 50%;
-            z-index: 999;
+            z-index: 8;
             margin: 0;
             } 
 
@@ -578,12 +638,19 @@
               transition: all 0.3s;
             }
           }
+
+
+
+
+
+
+          
 /* _________________ END OF MAXpx ________________ */
           @media screen and (min-width: 1000px){
           
                 .gridContent {
                     display: grid;
-                    top: 0;
+                    top: 10px;
                     margin: 0px auto 0;
                     max-width: 100%;
                     height: 100dvh;
@@ -592,29 +659,136 @@
                     background-position: center center;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    grid-template-columns: 1fr 320px 320px 1fr;
+                    grid-template-columns: 1fr 720px 1fr;
                     grid-template-rows: 60px 260dvh auto;
                     grid-template-areas:
-                      ". title title ."
-                      "ls content content rs"
-                      "ls footer footer rs";
+                      ". title ."
+                      "ls content rs"
+                      "ls footer rs";
                     z-index: 0;
                   }
 
-          .textLight,.textDark{
-            grid-area: content span 2 span 2;
-            min-width: 720px;
-            max-width: 60%;
-            top: 20px;
+            #Mysteries_Container{
+            grid-area: content;
+            position: relative;
+            left: 0px;
+            width: 600px;
+            top: 185px; 
             z-index: 1;
+            height: 299vh;
+           }
+
+            #Joyful__Mysteries,
+            #Mysteries__of__Light,
+            #Sorrowful__Mysteries,
+            #The__Glorious__Mysteries{
+              position: absolute;
+              top: 7dvh;
+              bottom: 100px;
+              width: 720px;
+              height: 299vh;
+              text-align: center;
+              z-index: 0;
+            }
+        
+            .J1,.L1,.S1,.G1,
+            .J2,.L2,.S2,.G2,
+            .J3,.L3,.S3,.G3,
+            .J4,.L4,.S4,.G4,
+            .J5,.L5,.S5,.G5{
+              position: absolute;
+              margin-left: 0;
+              color: var(--darkModeText);
+              opacity: 0;
+              padding: 20px;
+              border: none;
+              border-radius: 25px;
+              min-width: 320px;
+              width: 720px;
+              height: 299vh;
+              transition: ease 0.7s;
+              
+            }
+
+            .J1.active,.L1.active,.S1.active,.G1.active,
+            .J2.active,.L2.active,.S2.active,.G2.active,
+            .J3.active,.L3.active,.S3.active,.G3.active,
+            .J4.active,.L4.active,.S4.active,.G4.active,
+            .J5.active,.L5.active,.S5.active,.G5.active{
+              color: var(--darkModeText);
+              opacity: 1;
+              padding: 20px;
+              position: absolute;
+              min-width: 320px;
+              width: 720px;
+              height: 295vh;
+              border: none;
+              border-radius: 25px;
+              left: 8.4em;
+              transition: ease 0.7s;
+
+                              }
+
+
+                             /* Mystery Background Colour Active */
+                .bg{
+                  top: -15px;
+                  opacity: 1;
+                  position: absolute;
+                  min-width: 320px;
+                  width: 720px;
+                  height: 305vh;
+                  border: none;
+                  border-radius: 25px;
+                  left: -360px;
+                  background-color: var(--darkerBlue);
+                  transition: ease 0.7s;
+                  z-index: -2;
+                }
+                  
+          .Mary_Heading,
+          .Mary_Heading600,
+          .Mary_Heading340,
+          .Mary_Heading360{
+            display: none;
           }
+
+          .Mary_Heading720{
+          display: block;
+          grid-area: title;
+          position: absolute;
+          left: 0;
+          justify-self: center;
+          top: 0px;
+          z-index: -1;
+        }
+
+                    .textLight, .textDark {
+                      top: 65px;
+                      margin: 46px auto;
+                      width: 720px;
+                      justify-self: center;
+                      height: 320dvh;
+                      z-index: 0;
+                    }
+
+                    .title {
+                      position: absolute;
+                      align-items: center;
+                      justify-self: center;
+                      left: 24%;                      
+                      top: 114px;
+                      font-size: 5rem;
+                      z-index: 1;
+                    }
 
           #Mysteries_Container{
             grid-area: content;
             position: relative;
             left: 225px;
-            width: 700px;
-            top: 25px; 
+            width: 720px;
+            top: 185px; 
+            z-index: 0;
            }
 
             #Joyful__Mysteries,
@@ -625,17 +799,18 @@
               top: 7dvh;
               bottom: 100px;
               min-width: 320px;
+              width: 720px;
               text-align: center;
               z-index: 5;
             }
                           
-           #counters-and-buttons-container{
+            #counters-and-buttons-container{
               display: block;
               margin: 0;
               top: 22em;
               left: 740px;
               position: relative;
-              z-index: 999;
+              z-index: 8;
             }
 
             #counters-container,
@@ -643,7 +818,7 @@
             position: absolute;
             transition: all 0.35;
             top: 50%;
-            z-index: 999;
+            z-index: 8;
             margin: 0;
             } 
                 /* ....  THE BUTTONS MYSTERIES SELECTION  ... */
@@ -655,13 +830,7 @@
                       left: 25%;
                       scale: 1.3;
                      }
-                     .title{
-                    left: 27%;
-                    font-size: 5rem;
-                    top: 0px;
-                    z-index: 2;
-                     }
-
+        
                      .signCross{
                       top: -40px;
                      }
@@ -686,6 +855,7 @@
             letter-spacing: 1px;
             margin: 0;
             cursor: pointer;
+            z-index: 9;
             }
 
 
@@ -710,6 +880,7 @@
             margin: 0;
             cursor: pointer;
             box-shadow: 0 0 7px 1px var(--lightblue);
+            z-index: 9;
             }
 
                     /* POP UP MSG */
@@ -727,14 +898,157 @@
           .pop_up_msg.active{
             position: fixed;
             color: var(--green-popMsg);
-            z-index: 9;
-            top: 130px;
+            z-index: 8;
+            top: 350px;
             left: 48%;
             font-size: small;
             display: block;
             transition: ease 0.5s;
-          }
+          }          
 
+
+        .mystery  p, .sub__title{
+        right: 30px;
+        position: absolute;
+        width: 340px;
+        }
+
+        .mystery .IM{
+        transform: scale(1);
+        top: 0em;
+        left: -330px;
+        }
+/* ------------------------------------------------- */
+        .Gabriel{
+          display: block;
+          position: absolute;
+       }
+
+        .Visitation{
+          position: absolute;
+          margin-top: -3.5em;
+        }
+
+          .Manger{
+          display: block;
+          position: absolute;
+        }
+       
+        .Presentation{
+          display: block;
+          position: absolute;
+          margin-top: 30px;
+        }
+
+        .Found{
+          display: block;
+          position: absolute;
+          margin-top: 0em;
+        }
+
+        /* ---------------------------------------- */
+        .Baptismal{
+          display: block;
+          position: absolute;
+          margin-top: 2em;
+        }
+      
+        .Cana{
+          display: block;
+          position: absolute;
+          margin-top: 2em;
+        }
+
+        .Repent{
+          display: block;
+          position: absolute;
+          top: 12em;
+        }
+
+        .third__message{
+          margin-top: 1em;
+        }
+
+        .Transfiguration{
+          display: block;
+          position: absolute;
+          margin-top: 0em;
+        }
+
+
+        .theEucharist{
+          display: block;
+          position: absolute;
+          margin-top: 0em;
+        }
+
+        /* ----------------------------------------------- */
+        .Gethsemane  {
+          display: block;
+          position: absolute;
+          margin-top: 2em;
+          margin-left: 0em;
+        }
+
+        .Scourging{
+          display: block;
+          position: absolute;
+          margin-top: 2em;
+          margin-left: 0em;
+        }
+
+        .crownThorn{
+          display: block;
+          position: absolute;
+          margin-top: 2em;
+          margin-left: 0em;
+        }
+
+        .JesusCarry{
+          display: block;
+          position: absolute;
+          margin-top: 2em;
+          margin-left: 0em;
+        }
+       
+           .Crucified{
+          display: block;
+          position: absolute;
+          margin-top: 2em;
+          margin-left: 0em;
+        }
+       
+        /* ------------------------------------------------ */
+       .theResurrection{
+          position: absolute;
+          margin-top: 2em;
+        }
+        .theAscension{
+          position: absolute;
+          margin-top: 0em;
+        }
+
+        .theHolySpirit{
+          position: absolute;
+          margin-top: -5em;
+        }
+        .theAssumption{
+          display: block;
+          position: absolute;
+          margin-top: -4em;
+        }
+
+        .QueenofHeaven{
+          position: absolute;
+          margin-top: 1em;
+        }
+         .The__crowning__Queen__of__Heaven{
+         width: 280px;
+         left: 1em;
+        }
+       .fifth__message{
+          margin-top: 2em;
+        }
   }
 
 

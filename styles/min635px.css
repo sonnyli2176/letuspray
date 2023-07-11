@@ -4,7 +4,7 @@
                 @media screen and (min-width: 635px) {
                   .gridContent {
                     display: grid;
-                    top: 0;
+                    top: 80px;
                     margin: 0px auto 0;
                     max-width: 100%;
                     height: 100dvh;
@@ -19,9 +19,24 @@
                       ". title ."
                       "ls content rs"
                       "ls footer rs";
-                    z-index: 0;
                   }
 
+                    .Mary_Heading,
+                    .Mary_Heading600,
+                    .Mary_Heading340,
+                    .Mary_Heading720
+                    {
+                      display: none;
+                    }
+
+                    .Mary_Heading360{
+                    grid-area: title;
+                    position: relative;
+                    left: 0%;
+                    justify-self: center;
+                    top: -70px;
+                    z-index: -1;
+                  }
 
                   .signCross{
                     top: -70px;
@@ -32,7 +47,7 @@
                      #the__mysteries__mode{
                       width: 80%;
                       margin: 0 45px;
-                      z-index: 999;
+                      z-index: 0;
                       top: 30px;
                      }
 
@@ -54,8 +69,8 @@
           .pop_up_msg{
             position: fixed;
             color: var(--green-popMsg);
-            z-index: 9;
-            top: 150px;
+            z-index: 0;
+            top: 250px;
             left: 45%;
             font-size: small;
             display: none;
@@ -65,8 +80,8 @@
           .pop_up_msg.active{
             position: fixed;
             color: var(--green-popMsg);
-            z-index: 9;
-            top: 170px;
+            z-index: 1;
+            top: 355px;
             left: 40%;
             font-size: small;
             display: block;
@@ -93,6 +108,7 @@
             letter-spacing: 1px;
             margin: 0;
             cursor: pointer;
+            z-index: 2;      
             }
 
           .joyful_btn:hover ,
@@ -113,6 +129,7 @@
             margin: 0;
             cursor: pointer;
             box-shadow: 0 0 7px 1px var(--lightblue);
+            z-index: 9;      
             }
 
           #Mysteries_Container{
@@ -120,7 +137,8 @@
             position: relative;
             left: -8.4em;
             width: 635px;
-            top: 25px;         
+            top: 90px;   
+            z-index: 1;      
            }
 
                               #Joyful__Mysteries,
@@ -132,7 +150,6 @@
                                 bottom: 100px;
                                 min-width: 320px;
                                 text-align: center;
-                                z-index: 5;
                               }
                           
                               .J1,.L1,.S1,.G1,
@@ -174,6 +191,12 @@
                               }
 
 
+
+                              .bg{
+                                  z-index: -2;
+                                  position: absolute;
+
+                              }
          .J1,.L1,.S1,.G1{
             order: 5;
           }
@@ -190,110 +213,105 @@
             order: 1;
           }
 
+          /* Para Div Text */
+                .mystery p {
+                  z-index: 1;
+                  padding-top: 2em;
+                }
+                      
+                .sub__title{
+                position: relative;
+                top: 1em;
+                color: var(--lightblue);
+                font-size: large;
+              }
 
-                            
-                  .sub__title{
-                        color: var(--lightblue);
-                        font-size: large;
-                      }
-
-                      .sub__title{
-                      position: relative;
-                      top: 1em;
-                      color: var(--lightblue);
-                      font-size: large;
-                    }
-
-                  .sub__title + p{
-                      padding-top: 2em;
-                    }
-            
 /* ------------------------------------------------- */
         .Gabriel{
           display: block;
           position: absolute;
-          top: 13.5em;
+          top: 2em;
         }
 
         .Visitation{
           display: block;
           position: absolute;
-          top: 18.5em;
+          top: 1em;
         }
 
           .Manger{
           display: block;
           position: absolute;
-          top: 28em;
+          top: 7em;
         }
        
         .Presentation{
           display: block;
           position: absolute;
-          top: 22.5em;
+          top: 17.5em;
         }
 
         .Found{
           display: block;
           position: absolute;
-          top: 21em;
+          top: 12em;
         }
 
         /* ---------------------------------------- */
         .Baptismal{
           display: block;
           position: absolute;
-          top: 16em;
+          top: 1em;
         }
       
         .Cana{
           display: block;
           position: absolute;
-          top: 18.5em;
+          top: 14.5em;
         }
 
         .Repent{
           display: block;
           position: absolute;
-          top: 12em;
+          top: 0em;
         }
         .Transfiguration{
           display: block;
           position: absolute;
-          top: 14.5em;
+          top: 0.5em;
         }
         .theEucharist{
           display: block;
           position: absolute;
-          top: 11em;
+          top: 0em;
         }
 
         /* ----------------------------------------------- */
         .Gethsemane  {
           display: block;
           position: absolute;
-          top: 21em;
+          top: 0em;
           width:315px;
         }
 
         .Scourging{
           display: block;
           position: absolute;
-          top: 10em;
+          top: 2em;
           width:315px;
 
         }
         .crownThorn{
           display: block;
           position: absolute;
-          top: 17em;
+          top: 0em;
           width:315px;
         }
 
         .JesusCarry{
           display: block;
           position: absolute;
-          top: 15em;
+          top: 0em;
           width:315px;
         }
        
@@ -301,7 +319,7 @@
        .Crucified{
           display: block;
           position: absolute;
-          top: 23em;
+          top: 3em;
           width:315px;
         }
        
@@ -309,29 +327,30 @@
        .theResurrection{
           display: block;
           position: absolute;
-          top: 22.5em;
+          top: 12em;
         }
         .theAscension{
           display: block;
           position: absolute;
-          top: 10.5em;
+          top: 0em;
         }
 
         .theHolySpirit{
           display: block;
           position: absolute;
-          top: 20em;
+          top: 1em;
         }
+
         .theAssumption{
           display: block;
           position: absolute;
-          top: 10.5em;
+          top: 2em;
         }
 
         .QueenofHeaven{
           display: block;
           position: absolute;
-          top: 13em;
+          top: 2em;
         }
 
         .mystery img{
@@ -365,18 +384,20 @@
                     }
 
                     .textLight, .textDark {
-                      margin: -25px auto;
+                      margin: 45px auto 0;
                       width: 360px;
                       justify-self: center;
                       height: 320dvh;
+                      z-index: 1;
                     }
 
                     .title {
                       position: absolute;
                       align-items: center;
                       justify-self: center;
-                      top: 0px;
+                      top: 67px;
                       left: 40px;
+                      z-index: 3;
                     }
 
                     .mary,
@@ -448,13 +469,17 @@
                       margin: 0;
                     }
 
+     .start{
+              z-index: 2;
+            }  
+
 #counters-and-buttons-container{
               display: block;
               margin: 0;
               top: 22em;
-              left: 380px;
+              left: 0px;
               position: relative;
-              z-index: 999;
+              z-index: 2;
             }
 
             #counters-container,
@@ -462,7 +487,7 @@
             position: absolute;
             transition: all 0.35;
             top: 50%;
-            z-index: 999;
+            z-index: 0;
             margin: 0;
             } 
 
