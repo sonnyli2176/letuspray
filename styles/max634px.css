@@ -40,6 +40,14 @@
               "ls content rs"
               "ls footer rs";
           }
+#Rosary {
+  background-image: url('/images/Rosary.svg');
+  width: auto;
+  display: block;
+  position: absolute;
+  z-index: 9;
+  margin: 0;
+}
 
           body{
             touch-action: pan-y;
