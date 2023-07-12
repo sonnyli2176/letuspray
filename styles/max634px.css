@@ -21,7 +21,7 @@
 }
 
 /* ==============   screen and (max-width: 634px)   ======================= */
-        @media screen and (max-width: 634px)  {
+        @media screen and (max-width: 668px)  {
           .gridContent {
             display: grid;
             position: absolute;
@@ -264,7 +264,7 @@
                   position: absolute;
                   min-width: 320px;
                   width: 340px;
-                  height: 321dvh;
+                  height: 323dvh;
                   border: none;
                   border-radius: 25px;
                   left: 0;

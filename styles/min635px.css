@@ -1,7 +1,7 @@
 
 
  /* =========================Min-width 635px ==========================*/
-                @media screen and (min-width: 635px) {
+                @media screen and (min-width: 669px) {
                   .gridContent {
                     display: grid;
                     top: 80px;
@@ -621,3 +621,47 @@
           }
 /* _________________ END OF MAX 634px ________________ */
                   
+@media (min-width: 670px) and (max-width: 767px){
+                    .Mary_Heading,
+                    .Mary_Heading600,
+                    .Mary_Heading340,
+                    .Mary_Heading720
+                    {
+                      display: none;
+                    }
+
+                    .home {
+                      position: absolute;
+                      /* left: 5rem; */
+                    }
+
+                    nav {
+                      display: flex;
+                      width: 80%;
+                      height: fit-content;
+                      margin: 70px auto;
+                      position: relative;
+                      flex-direction: row;
+                      justify-content: space-between;
+                    }
+
+                    .menu-ul {
+                      display: flex;
+                      flex-direction: row;
+                      width: 100%;
+                      height: fit-content;
+                      list-style: none;
+                      justify-content: right;
+                      right: 0rem;
+                    }
+
+                    .menu-ul li a {
+                      padding-left: 2rem;
+                      letter-spacing: 1px;
+                      right: 1.5rem;
+                    }
+
+                    .home {
+                      left: 2rem;
+                    }
+}
