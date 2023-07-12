@@ -160,15 +160,15 @@
                                 position: absolute;
                                 margin-left: 8.4em;
                                 color: var(--darkModeText);
-                                background-color: var(--darkerBlue);
+                                background-color: none;
                                 opacity: 0;
+                                display: none;
                                 padding: 20px;
                                 border: none;
                                 border-radius: 25px;
                                 min-width: 320px;
                                 width: 359px;
                                 height: 305vh;
-                                transition: ease 0.7s;
                               }
 
                               .J1.active,.L1.active,.S1.active,.G1.active,
@@ -177,6 +177,7 @@
                               .J4.active,.L4.active,.S4.active,.G4.active,
                               .J5.active,.L5.active,.S5.active,.G5.active{
                                 color: var(--darkModeText);
+                                display: block;
                                 background-color: var(--darkerBlue);
                                 opacity: 1;
                                 padding: 20px;
@@ -187,7 +188,6 @@
                                 border: none;
                                 border-radius: 25px;
                                 left: 0em;
-                                transition: ease 0.7s;
                               }
 
 

@@ -136,22 +136,7 @@
             box-shadow: 0 0 7px 1px var(--lightblue);
             }
 
-                        /* Mystery Background Colour Active */
-                .bg{
-                  top: -15px;
-                  opacity: 1;
-                  position: absolute;
-                  min-width: 320px;
-                  width: 600px;
-                  height: 299vh;
-                  border: none;
-                  border-radius: 25px;
-                  left: -135px;
-                  background-color: var(--darkerBlue);
-                  transition: ease 0.7s;
-                  z-index: -2;
-                }
-   
+        
 
       #Mysteries_Container{
             grid-area: content;
@@ -168,7 +153,7 @@
             #Sorrowful__Mysteries,
             #The__Glorious__Mysteries{
               position: absolute;
-              top: 7dvh;
+              top: 10vh;
               bottom: 100px;
               width: 600px;
               height: 299vh;
@@ -183,17 +168,19 @@
             .J4,.L4,.S4,.G4,
             .J5,.L5,.S5,.G5{
               position: absolute;
-              margin-left: 8.4em;
+              margin-left: 0px;
               color: var(--darkModeText);
-              opacity: 0;
+              display: none;
               padding: 20px;
               border: none;
               border-radius: 25px;
               min-width: 320px;
               width: 600px;
               height: 299vh;
-              transition: ease 0.7s;
-              
+              background-color: none;
+              z-index: 0;
+              opacity: 0;
+              top: -20px;
             }
 
             .J1.active,.L1.active,.S1.active,.G1.active,
@@ -201,20 +188,36 @@
             .J3.active,.L3.active,.S3.active,.G3.active,
             .J4.active,.L4.active,.S4.active,.G4.active,
             .J5.active,.L5.active,.S5.active,.G5.active{
+              display: block;
               color: var(--darkModeText);
-              /* background-color: var(--darkerBlue); */
               opacity: 1;
               padding: 20px;
               position: absolute;
-              /* min-width: 320px; */
+              min-width: 320px;
               width: 600px;
-              height: 295dvh;
+              height: 295vh;
               border: none;
               border-radius: 25px;
               left: 0em;
-              transition: ease 0.7s;
+              top: 0px;
+              background-color: red;
+             }
 
-                              }
+             /* Mystery Background Colour Active */
+            .bg{
+              top: -15px;
+              opacity: 1;
+              position: absolute;
+              min-width: 320px;
+              width: 600px;
+              height: 299vh;
+              border: none;
+              border-radius: 25px;
+              left: 0px;
+              background-color: var(--darkerBlue);
+              z-index: -2;
+            }
+
 
                              
          .J1,.L1,.S1,.G1{
@@ -232,31 +235,33 @@
           .J5,.L5,.S5,.G5{
             order: 1;
           }
-
-                
-                           
+      
                       .sub__title{
                       position: relative;
                       top: 1em;
                       color: var(--lightblue);
                       font-size: large;
-                      left: 135px;
+                      left: 270px;
                     }
 
-                     .sub__title + p{
-                      padding-top: 2em;
-                    }
-            
+                  
                     .mystery .IM{
                     top: -2em;
-                    left: -130px;
+                    left: 0px;
                     }
 
-                    .mystery p{
+                    .mystery p {
                     top: -2em;
-                    margin-left: 170px;
+                    margin-left: 300px;
                     width: 250px;
+                    } 
+                    
+                    .sub__title + p{
+                      padding-top: 2em;
+                      margin-left: 200px;
+
                     }
+            
 /* ------------------------------------------------- */
         .Gabriel{
           display: block;
@@ -304,6 +309,16 @@
           position: absolute;
           margin-top: 2em;
         }
+        .The__kingdom__of__God{/* Adjustment of the sub-title text */
+          display: block;
+          position: absolute;
+          margin-top: 0em;
+          margin-left: 2em;
+          width: 280px;
+        }
+        .third__message{/* Adjustment paragraph text */
+          margin-top: 2em;
+        }
 
         .Transfiguration{
           display: block;
@@ -314,6 +329,12 @@
           display: block;
           position: absolute;
           margin-top: 1em;
+        }
+        .fifth__message{
+          display: block;
+          position: relative;
+          margin-top: 5em;
+
         }
 
         /* ----------------------------------------------- */
@@ -683,10 +704,10 @@
             #Sorrowful__Mysteries,
             #The__Glorious__Mysteries{
               position: absolute;
-              top: 7dvh;
+              margin-top: 3vh;
               bottom: 100px;
               width: 720px;
-              height: 299vh;
+              height: 295vh;
               text-align: center;
               z-index: 0;
             }
@@ -697,17 +718,17 @@
             .J4,.L4,.S4,.G4,
             .J5,.L5,.S5,.G5{
               position: absolute;
-              margin-left: 0;
+              margin-left: -225px;
               color: var(--darkModeText);
               opacity: 0;
+              display: none;
               padding: 20px;
               border: none;
               border-radius: 25px;
               min-width: 320px;
               width: 720px;
-              height: 299vh;
-              transition: ease 0.7s;
-              
+              height: 295vh;
+              background-color: none;
             }
 
             .J1.active,.L1.active,.S1.active,.G1.active,
@@ -715,6 +736,7 @@
             .J3.active,.L3.active,.S3.active,.G3.active,
             .J4.active,.L4.active,.S4.active,.G4.active,
             .J5.active,.L5.active,.S5.active,.G5.active{
+              display: block;
               color: var(--darkModeText);
               opacity: 1;
               padding: 20px;
@@ -724,25 +746,23 @@
               height: 295vh;
               border: none;
               border-radius: 25px;
-              left: 8.4em;
-              transition: ease 0.7s;
+              left: 22.5em;
+              background-color: none;
+              }
 
-                              }
 
-
-                             /* Mystery Background Colour Active */
+         /* Mystery Background Colour Active */
                 .bg{
                   top: -15px;
                   opacity: 1;
                   position: absolute;
                   min-width: 320px;
                   width: 720px;
-                  height: 305vh;
+                  height: 302vh;
                   border: none;
                   border-radius: 25px;
                   left: -360px;
                   background-color: var(--darkerBlue);
-                  transition: ease 0.7s;
                   z-index: -2;
                 }
                   
@@ -981,6 +1001,13 @@
           position: absolute;
           margin-top: 0em;
         }
+        .fifth__message{
+          display: block;
+          position: absolute;
+          top: 0em;
+
+        }
+
 
         /* ----------------------------------------------- */
         .Gethsemane  {
@@ -1047,7 +1074,7 @@
          left: 1em;
         }
        .fifth__message{
-          margin-top: 2em;
+          margin-top: 3em;
         }
   }
 
