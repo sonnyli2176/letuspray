@@ -21,7 +21,8 @@
                     z-index: 0;
                   }
 
-                    .Mary_Heading,
+           
+                  
                     .Mary_Heading360,
                     .Mary_Heading340,
                     .Mary_Heading720{
@@ -67,30 +68,8 @@
   border-radius: 5px;
   text-align: center;}
 
-           /* POP UP MSG */
-          .pop_up_msg{
-            position: fixed;
-            color: var(--green-popMsg);
-            z-index: 9;
-            top: 150px;
-            left: 45%;
-            font-size: small;
-            display: none;
-            transition: ease 0.5s;
-          }
-          
-          .pop_up_msg.active{
-            position: fixed;
-            color: var(--green-popMsg);
-            z-index: 9;
-            top: 330px;
-            left: 40%;
-            font-size: small;
-            display: block;
-            transition: ease 0.5s;
-          }
 
-          .joyful_btn,
+         .joyful_btn,
           .light_btn,
           .sorrowful_btn,
           .glorious_btn {
@@ -766,7 +745,6 @@
                   z-index: -2;
                 }
                   
-          .Mary_Heading,
           .Mary_Heading600,
           .Mary_Heading340,
           .Mary_Heading360{

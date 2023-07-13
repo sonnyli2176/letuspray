@@ -1,0 +1,845 @@
+
+
+/* ==============   screen and (max-width: 395px)   ======================= */
+   @media screen and (max-width: 395px){
+              .mary,.roses{
+              display: none;
+            }
+        }
+
+
+
+@media screen and (max-width: 550px)  {
+
+ .roses,.mary{
+  opacity: 0;
+  transition: all 0.7s;
+ }
+
+   
+
+}
+
+/* ==============   screen and (max-width: 634px)   ======================= */
+        @media screen and (max-width: 668px)  {
+          .gridContent {
+            display: grid;
+            position: absolute;
+            top: -10px;
+            margin-top: 5em;
+            max-width: 634px;
+            height: 100dvh;
+            justify-content: center;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            grid-template-columns: 1fr 320px 1fr;
+            grid-template-rows: 60px 275dvh auto;
+            grid-template-areas:
+              ". title ham"
+              "ls content rs"
+              "ls footer rs";
+          }
+#Rosary {
+  background-image: url('/images/Rosary.svg');
+  width: auto;
+  display: block;
+  position: fixed;
+  z-index: 9;
+  margin: 0;
+  opacity: 1;
+}
+
+          body{
+            touch-action: pan-y;
+          }
+
+
+      
+                    .Mary_Heading340,
+                    .Mary_Heading600,
+                    .Mary_Heading720
+                    {
+                      display: none;
+                    }
+
+                    .Mary_Heading360{
+                    grid-area: title;
+                    position: relative;
+                    margin-left: -21px;
+                    justify-self: center;
+                    top: -37px;
+                    z-index: -1;
+                    width: 340px;
+                  }
+
+
+ /* Browser message */
+#chromeBrowser{
+  display: none;
+  position: fixed;
+  width: 35px;
+  height: 2em;
+  color: var(--rose);
+  margin: 0;
+  min-width: 430px;
+  padding: 5px 10px;
+  top: -1em;
+  left: 2em;
+  background-color: #000000;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 0;
+}
+
+/* Browser message */
+#chromeBrowser.active{
+  display: block;
+  position: fixed;
+  width: 35px;
+  height: 2em;
+  color: var(--rose);
+  background-color: #000000;
+  margin: 0;
+  min-width: 430px;
+  padding: 25px 10px;
+  top: -1em;
+  left: -35px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  z-index: 0;
+  transform: scale(0.8);
+}
+
+     
+           /* ....  THE BUTTONS DIV CONTAINER MYSTERIES SELECTION  ... */
+            #the__mysteries__mode{
+            display: flex;
+            position: absolute;
+            z-index: 2;
+            background-color: none;
+            min-width: 340px;
+            max-width: 360px;
+            max-height: auto;;
+            top: -3.3em;
+            margin-left: 0em;
+            padding: 0;
+            }
+            
+            /* ....  THE BUTTONS MYSTERIES SELECTION  ... */
+
+          .joyful_btn,
+          .light_btn,
+          .sorrowful_btn,
+          .glorious_btn {
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+            width: 100%;
+            height: 45px;
+            padding: 5px;
+            left: -15px;
+            top: 65px;
+            border-radius: 10px;
+            background: none;
+            border: none;
+            color: inherit;
+            transform: scale(0.8);
+            letter-spacing: 1px;
+            margin: 0;
+            cursor: pointer;
+            z-index: 9;
+            }
+
+          .joyful_btn:hover ,
+          .light_btn:hover ,
+          .sorrowful_btn:hover ,
+          .glorious_btn:hover {
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+            width: 100%;
+            height: 45px;
+            padding: 5px;
+            left: -15px;
+            top: 65px;
+            border-radius: 10px;
+            color: var(--lighterblue);
+            transform: scale(0.8);
+            letter-spacing: 1px;
+            margin: 0;
+            cursor: pointer;
+            box-shadow: 0 0 7px 1px var(--lightblue);
+            z-index: 9;
+            }
+
+            #Mysteries_Container{
+            grid-area: content;
+            position: relative;
+            min-width: 320px;
+            max-width: 380px;
+            left: -10px;
+            z-index: 1;
+            top: 120px;
+          }    
+                #Joyful__Mysteries,
+                #Mysteries__of__Light,
+                #Sorrowful__Mysteries,
+                #The__Glorious__Mysteries{
+                  position: absolute;
+                  top: 4dvh;
+                  bottom: 100px;
+                  min-width: 320px;
+                  width: 340px;
+                  text-align: center;
+                }
+            
+                .J1,.L1,.S1,.G1,
+                .J2,.L2,.S2,.G2,
+                .J3,.L3,.S3,.G3,
+                .J4,.L4,.S4,.G4,
+                .J5,.L5,.S5,.G5{
+                  position: absolute;
+                  margin-left: 0em;
+                  color: var(--darkModeText);
+                  opacity: 0;
+                  padding: 20px 85px 20px 20px;
+                  border: none;
+                  border-radius: 25px;
+                  min-width: 320px;
+                  max-width: 340px;
+                  height: 317vh;
+                  transition: ease 0.7s;
+                  z-index: 2;
+                }
+
+                .J1.active,.L1.active,.S1.active,.G1.active,
+                .J2.active,.L2.active,.S2.active,.G2.active,
+                .J3.active,.L3.active,.S3.active,.G3.active,
+                .J4.active,.L4.active,.S4.active,.G4.active,
+                .J5.active,.L5.active,.S5.active,.G5.active{
+                  color: var(--darkModeText);
+                  opacity: 1;
+                  padding: 20px 55px 20px 20px;
+                  position: absolute;
+                  min-width: 320px;
+                  max-width: 340px;
+                  height: 317vh;
+                  border: none;
+                  border-radius: 25px;
+                  left: 0;
+                  transition: ease 0.7s;
+                }
+
+                /* Para Div Text */
+                .mystery p {
+                  z-index: 1;
+                  padding-top: 1em;
+                }
+                /* Mystery Image Active */
+                .IM{
+                  position: absolute;
+                  top: -200px;
+                  left: -3px;
+                  z-index: -1;
+                }
+                /* Mystery Background Colour Active */
+                .bg{
+                  top: -15px;
+                  opacity: 1;
+                  position: absolute;
+                  min-width: 320px;
+                  width: 360px;
+                  height: 323dvh;
+                  border: none;
+                  border-radius: 25px;
+                  left: -10px;
+                  background-color: var(--darkerBlue);
+                  transition: ease 0.7s;
+                  z-index: -2;
+                }
+   
+        .sub__title{
+          position: relative;
+          top: -5px;
+          color: var(--lightblue);
+          font-size: large;
+        }
+
+        /* THE JOYFUL MYSTERIES */
+       .Gabriel{
+          display: block;
+          position: absolute;
+          top: 0em;
+          z-index: 0;
+        } 
+
+        .Visitation{
+          display: block;
+          position: absolute;
+          top: 10px;
+        }
+
+     
+          .Manger{
+          display: block;
+          position: absolute;
+          top: 120px;
+        }
+       
+        .Presentation{
+          display: block;
+          position: absolute;
+          top: 340px;
+        }
+
+        .Found{
+          display: block;
+          position: absolute;
+          top: 250px;
+        }
+
+        /* THE MYSTERIES OF LIGHT */
+      .Baptismal{
+          display: block;
+          position: absolute;
+          top: 0em;
+        }
+      
+        .Cana{
+          display: block;
+          position: absolute;
+          top: 250px;
+        }
+
+        .Repent{
+          display: block;
+          position: absolute;
+          top: 0em;
+        }
+
+        .Transfiguration{
+          display: block;
+          position: absolute;
+          top: 85px;
+        }
+        .theEucharist{
+          display: block;
+          position: absolute;
+          top: 0em;
+        }
+   
+
+
+        .Gethsemane  {
+          display: block;
+          position: absolute;
+          top: 0em;
+        }
+
+        .Scourging{
+          display: block;
+          position: absolute;
+          top: 0;
+        }
+        .crownThorn{
+          display: block;
+          position: absolute;
+          top: 0em;
+        }
+
+        .JesusCarry{
+          display: block;
+          position: absolute;
+          top: 0em;
+        }
+       
+          .Crucified{
+          display: block;
+          position: absolute;
+          top: 0em;
+        }
+       
+
+        .theResurrection{
+          display: block;
+          position: absolute;
+          top: 200px;
+        }
+        .theAscension{
+          display: block;
+          position: absolute;
+          top: 0;
+        }
+
+        .theHolySpirit{
+          display: block;
+          position: absolute;
+          top:150px;
+        }
+        .theAssumption{
+          display: block;
+          position: absolute;
+          top: 0;
+        }
+
+        .QueenofHeaven{
+          display: block;
+          position: absolute;
+          top: 100px;
+        }
+
+   
+
+         .J1,.L1,.S1,.G1{
+            order: 5;
+          }
+          .J2,.L2,.S2,.G2{
+            order: 4;
+          }
+          .J3,.L3,.S3,.G3{
+            order: 3;
+          }
+          .J4,.L4,.S4,.G4{
+            order: 2;
+          }
+          .J5,.L5,.S5,.G5{
+            order: 1;
+          }
+
+
+        div.gridContent {
+            z-index: 0;
+            margin-top: 10%;
+          }
+     
+
+
+            .mary {
+              width: 100%;
+              grid-area: ls;
+              justify-self: self-end;
+            }
+
+            .roses {
+              width: 100%;
+              grid-area: rs;
+              justify-self: left;
+            }
+            #wrapper {
+              margin: 4rem 10px 1rem;
+              position: absolute;
+              top: 2em;
+          }
+
+            /* Sun Moon Icon */
+            .sun {
+              display: block;
+              position: absolute;
+              top: 5px;
+              left: 75%;
+              right: 12%;
+              margin: 0;
+              padding: 0;
+              cursor: pointer;
+              z-index: 9;
+            }
+
+            /* Sun Moon Icon */
+            .sun.active {
+              display: block;
+              position: absolute;
+              top: -55px;
+              left: 75%;
+              right: 12%;
+              margin: 0;
+              padding: 0;
+              cursor: pointer;
+              z-index: 2;
+            }
+
+            /* Beginning of Hamburger Nav */
+            nav {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              transition: all 0.5s ease-in-out;
+              z-index: 9;
+              top: 0px;
+            }
+
+            .nav {
+              display: none;
+            }
+
+            .nav.active {
+              display: block;
+              top: 0px;
+              left: 0;
+              margin: 0;
+              padding: 0;
+              position: relative;
+              place-items: center;
+              width: 100%;
+              z-index: 9;
+            }
+
+            .menu-ul {
+              position: relative;
+              width: 100vw;
+              height: 0;
+              top: 150px;
+              margin: 60px auto;
+              display: flex;
+              flex-direction: column;
+              left: 0;
+              list-style: none;
+              transition: all 0.1s ease-in-out;
+              z-index: 9;
+            }
+            .menu-ul li {
+              color: rgb(26, 176, 226);
+              padding: 5px;
+              margin: 0 auto;
+              width: 100%;
+            }
+
+            /* *********   This is where how text affected centering    **********/
+            .menu-ul li a {
+              color: rgb(26, 176, 226);
+              display: block; /* Must us display as block for padding*/
+              background-color: rgb(54, 71, 121);
+              padding-left: 10em; /*....... This is the main adjustment .......*/
+              padding: 0.5em 6em; /*....... This is the main adjustment .......*/
+              justify-content: center;
+            }
+
+            .menu-ul li a:hover {
+              background-color: rgb(54, 71, 121);
+              justify-self: center;
+              color: rgb(162, 199, 211);
+              background-color: rgb(47, 61, 104);
+            }
+
+            .clickLink {
+              position: relative;
+              width: 290px;
+              height: 30px;
+              top: -20px;
+              font-size: 1rem;
+            }
+
+            .link {
+              text-decoration: none;
+              color: var(--lightblue);
+              margin: 0;
+            }
+
+            /* =============================   The Hamburger Menu Section   ==============================*/
+            header {
+              display: flex;
+              justify-content: flex-end;
+              position: absolute;
+              align-items: center;
+              padding: 1rem;
+              width: 100%;
+              height: 70px;
+              top: 8px;
+              right: -20px;
+              margin: 0 auto;
+              padding: 0px;
+              box-sizing: border-box;
+              z-index: 3;
+            }
+
+            /* =============================   Off Screen Menu Section   ==============================*/
+            .offScreenMenu {
+              display: none;
+              position: fixed;
+              top: 0;
+              width: 100%;
+              height: 100dvh;
+              background-image: linear-gradient(
+                to top left,
+                var(--dark),
+                var(--darkblue),
+                var(--dark),
+                var(--dark)
+              );
+              border: 1px solid rgba(0, 195, 255, 0.448);
+              border-radius: 5px;
+              padding: 0px 15px;
+              box-shadow: 5px 5px 5px rgba(2, 162, 255, 0.1);
+              transition: right 0.5s;
+              z-index: 2; /* so that the Sun can be put behind*/
+            }
+
+            .offScreenMenu.active {
+              display: block;
+              position: fixed;
+              top: 0;
+              width: 100%;
+              height: 100dvh;
+              background-image: linear-gradient(
+                to top left,
+                var(--dark),
+                var(--darkblue),
+                var(--dark),
+                var(--dark)
+              );
+              border: 1px solid rgba(0, 195, 255, 0.448);
+              border-radius: 5px;
+              justify-self: center;
+              padding: 0px 15px;
+              box-shadow: 5px 5px 5px rgba(2, 162, 255, 0.1);
+              transition: right 0.5s;
+              z-index: 2; /* so that the Sun can be put behind*/
+              overflow: hidden;
+            }
+
+            .home {
+              margin: 0 auto;
+              left: 0;
+            }
+
+            .hamburger {
+              position: absolute;
+              margin: 0;
+              right: 10px;
+              top: 0px;
+              height: 30px;
+              width: 30px;
+              cursor: pointer;
+              padding: 1rem;
+              z-index: 3;
+            }
+
+            .hamburger.active {
+              position: absolute;
+              margin: 0;
+              right: 10px;
+              top: -60px;
+              height: 30px;
+              width: 30px;
+              cursor: pointer;
+              padding: 1rem;
+              z-index: 3;
+            }
+
+            .bar {
+              width: 70%;
+              height: 4px;
+              border-radius: 25px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background-color: var(--lightblue);
+              padding: 1px;
+              transition: transform 0.6s, opacity 0.8s, top 0.6s;
+              z-index: 7;
+            }
+
+            /* ==================    Hamburger Settings   ===================== */
+            .bar-top {
+              top: 25%;
+            }
+
+            .bar-bot {
+              top: 75%;
+            }
+
+            /* ==================    Hamburger Active Effects   ===================== */
+            .hamburger.active .bar-top {
+              transform: translate(-50%, -50%) rotate(-315deg);
+              top: 50%;
+            }
+
+            .hamburger.active .bar-mid {
+              opacity: 0;
+            }
+
+            .hamburger.active .bar-bot {
+              transform: translate(-50%, -50%) rotate(-225deg);
+              top: 50%;
+            }
+
+            /* End of Hamburger Nav */
+
+            /* ==================================================== */
+            .title {
+              position: absolute;
+              top: 100px;
+              justify-self: center;
+              padding: 0 auto;
+              z-index: 3;
+            }
+
+            .start{
+              z-index: 2;
+            }  
+            
+            .textLight {
+              position: absolute;
+              top: 100px;
+              width: 360px;
+              justify-self: center;
+              height: 330vh;
+              overflow: hidden;
+              z-index: 1;
+            }
+
+            
+            #counters-and-buttons-container{
+              display: block;
+              margin-left: 100%;
+              margin: 0px;
+              position: relative;
+              z-index: 2;
+            }
+
+            #counters-and-buttons-container.active{
+              left: -310px;
+              margin: 0px;
+              position: relative;
+              top: 0px;
+              z-index: 2;
+            }
+
+            #counters-container,
+            #buttons-container {
+            position: absolute;
+            transition: all 0.35;
+             }
+
+            /*........ The BIG 0 number .......*/
+            #beads {
+              position: absolute;
+              top: -85px;
+              left: 40px;
+              font-size: 1.8rem;
+              font-weight: 700;
+              color: var(--rose);
+              order: 3;
+              transform: translate(-50%, -105%);
+              background-color: black;
+              width: fit-content;
+              border: none;
+              border-radius: 3px;
+              transition: ease-in-out 0.3s;
+              padding: 0 3px;
+            }
+
+            /* Button */
+            #beads-plus {
+              position: relative;
+              background-color: var(--rose);
+              left: 10%;
+              top: -190px;
+              order: 1;
+              color: var(--white);
+              transform: scale(1.1)
+            }
+
+            /* Button */
+            #beads-plus::before {
+              content: "+";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -105%);
+              font-weight: 900;
+              font-size: large;
+            }
+
+            #beads-plus:hover,
+            #beads-plus:active {
+              background-color: var(--darkblue);
+              color: var(--faderose);
+              transition: all 0.3s;
+            }
+
+             /* Whole Button */
+            #decades {
+              font-size: 1.8rem;
+              font-weight: 700;
+              color: var(--lighterblue);
+              padding: 0 3px;
+              text-align: center;
+              top: -40px;
+              left: 40px;
+              transform: translate(-50%, -50%);
+              order: 2;
+              border: none;
+              border-radius: 3px;
+              transition: ease-in-out 0.3s;
+              width: fit-content;
+              background-color: black;
+            }
+
+            /* ...  Underneath Text  */
+            #decades__bottom{
+              position: absolute;
+              left: 15px;
+              top: -20px;
+              font-size: 0.8rem;
+              color: var(--rose);
+            }
+
+              /* BUTTON */
+            #rosaries {
+              position: absolute;
+              top: 40px;
+              left: 40px;
+              padding: 0 3px;
+              transform: translate(-50%, -50%);
+              font-size: 1.8rem;
+              font-weight: 700;
+              color: var(--lightrose);
+              order: 1;
+              background: none;
+              border: none;
+              transition: ease-in-out 0.3s;
+              border-radius: 3px;
+              width: fit-content;
+              background-color: black;
+            }
+
+            /* ...  Underneath Text  */
+            #rosaries__bottom {
+              position: absolute;
+              left: 15px;
+              top: 60px;
+              font-size: 0.8rem;
+              color: var(--rose);
+            }
+
+            #beads-plus,
+            #reset-btn {
+              font-weight: 200;
+              width: 50px;
+              height: 50px;
+              border-radius: 50px;
+              font-size: 0.8rem;
+              transition: ease-in-out 0.3s;
+            }
+
+            #reset-btn {
+              order: 3;
+              position: relative;
+              left: 12%;
+              top: 50px;
+              background-color: var(--lightblue);
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            }
+
+            #reset-btn:hover,
+            #reset-btn:active {
+              background-color: var(--darkblue);
+              color: var(--lighterblue);
+              transition: all 0.3s;
+            }
+          }
+/* _________________ END OF MAX 634px ________________ */
