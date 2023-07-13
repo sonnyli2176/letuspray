@@ -27,32 +27,7 @@
 }
 
 
-          /* POP UP MSG */
-          .pop_up_msg{
-            position: fixed;
-            color: var(--green-popMsg);
-            z-index: 9;
-            top: 130px;
-            left: 35%;
-            font-size: small;
-            display: none;
-            transition: ease 0.5s;
-          }
-          
-          .pop_up_msg.active{
-            position: fixed;
-            color: var(--green-popMsg);
-            background-color: var(--darkerBlue);
-            padding: 5px 10px;
-            border-radius:8px;
-            z-index: 9;
-            top: 130px;
-            left: 35%;
-            font-size: small;
-            display: block;
-            transition: ease 0.5s;
-          }
-
+  
         html, body{
   margin: 0 auto;
   position: relative;

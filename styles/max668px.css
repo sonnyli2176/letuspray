@@ -2,9 +2,17 @@
 
 /* ==============   screen and (max-width: 395px)   ======================= */
    @media screen and (max-width: 395px){
+    
               .mary,.roses{
               display: none;
-            }
+              }
+
+              #Rosary{
+              width: fit-content;
+              z-index: 9;
+              position: fixed;
+              }
+            
 
  /* Browser message */
 #chromeBrowser.active{
@@ -60,15 +68,7 @@
               "ls content rs"
               "ls footer rs";
           }
-#Rosary {
-  background-image: url('/images/Rosary.svg');
-  width: auto;
-  display: block;
-  position: fixed;
-  z-index: 9;
-  margin: 0;
-  opacity: 1;
-}
+
 
           body{
             touch-action: pan-y;
@@ -509,11 +509,12 @@
             /* *********   This is where how text affected centering    **********/
             .menu-ul li a {
               color: rgb(26, 176, 226);
-              display: block; /* Must us display as block for padding*/
+              display: block; /* Must display as block for padding*/
               background-color: rgb(54, 71, 121);
               padding-left: 10em; /*....... This is the main adjustment .......*/
               padding: 0.5em 6em; /*....... This is the main adjustment .......*/
               justify-content: center;
+              white-space: nowrap;
             }
 
             .menu-ul li a:hover {
@@ -704,7 +705,7 @@
               left: -310px;
               margin: 0px;
               position: relative;
-              top: 0px;
+              top: 30px;
               z-index: 2;
             }
 
