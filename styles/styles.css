@@ -285,6 +285,8 @@ nav {
   z-index: -1;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   position: relative;
+
+
 }
 
 /* The Text Content*/
@@ -308,7 +310,15 @@ nav {
   z-index: -1;
   box-shadow: 5px 5px 5px rgba(61, 184, 255, 0.41);
   position: relative;
+  /* SUBHEADING DarkTheme */
+.darkSub{
+  color: var(--lightblue);
 }
+
+}
+
+
+
 
 .mary,
 .roses {
