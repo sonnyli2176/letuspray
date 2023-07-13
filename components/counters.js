@@ -41,62 +41,44 @@ function updateDisplay() {
 let mystery = [];
 let mysteryOrigin = mystery.slice();
 
-// DISPLAY SELECTED MYSTERIES BUTTON MODE
-function MysteriesMessage(joyfulBtn, mysteriesMessage) {
-  const button = joyfulBtn;
-  let timeoutId;
-  button.addEventListener("click", () => {
-    mysteriesMessage.classList.add("active");
+const browserMessage = document.getElementById("chromeBrowser");
 
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      mysteriesMessage.classList.remove("active");
-    }, 3000);
-  });
+let uA = navigator.userAgent;
+let browser;
+let browserList = [
+  {
+    name: ("firefox", "Firefox"),
+    value: "firefox",
+  },
+  { name: "Opera", value: "OPR" },
+  {
+    name: "Edge" || "Edg" || "edge",
+    value: "Edge",
+  },
+  { name: "Safari", value: "Safari" },
+];
+
+for (let i in browserList) {
+  if (browserList[i].name.some((name) => uA.match(name))) {
+    browserMessage.classList.add("active");
+    c(uA[i]);
+    break;
+  } else {
+    browserMessage.classList.remove("active");
+  }
 }
 
-// const browserMessage = document.getElementById("chromeBrowser");
-      
-// let uA = navigator.userAgent;
-// let browser;
-// let browserList = [
-//   {
-//     name: ('firefox' , 'Firefox'), value: 'firefox'
-//   },
-//   { name: 'Opera', value: 'OPR' },
-//   { 
-//     name: 'Edge' || 'Edg' || 'edge', value: 'Edge'
-//   },
-//     {name: 'Safari', value: 'Safari'}
-// ]
-
-// for (let i in browserList) {
-//   if (browserList[i].name.some(name => uA.match(name))) {
-//     browserMessage.classList.add("active");
-//     break;
-//       } else {
-//     browserMessage.classList.remove("active");
-//   }
-// }
-
-// clearTimeout(uA);
-// uA = setTimeout(() => {
-//   browserMessage.classList.remove("active");
-// }, 6000);
-
-MysteriesMessage(joyfulBtn, mysteriesMessage);
-MysteriesMessage(lightBtn, mysteriesMessage);
-MysteriesMessage(sorrowfulBtn, mysteriesMessage);
-MysteriesMessage(gloriousBtn, mysteriesMessage);
+clearTimeout(uA);
+uA = setTimeout(() => {
+  browserMessage.classList.remove("active");
+}, 6000);
 
 let AllButtons = [joyfulBtn, lightBtn, sorrowfulBtn, gloriousBtn];
-
 let InActivities = 180000;
 let TimeOutId;
-
 function closeContainer() {
-  counterContainer.classList.remove('active');
-};
+  counterContainer.classList.remove("active");
+}
 
 function resetTimeout() {
   clearTimeout(TimeOutId);
@@ -120,7 +102,6 @@ class Mysteries {
     this.glo = gloriousClass;
     this.mystery = [];
   }
-
   // GET ACTIVE JOY
   getJoyActive() {
     this.joy.forEach((j) => {
@@ -128,14 +109,12 @@ class Mysteries {
       mystery.push(j);
     });
   }
-
   //   // DEACTIVE JOY
   DeactivateActiveJoy() {
     this.joy.forEach((j) => {
       j.classList.remove("active");
     });
   }
-
   //   // GET ACTIVE LIGHT
   getLightActive() {
     this.lit.forEach((l) => {
@@ -143,14 +122,12 @@ class Mysteries {
       mystery.push(l);
     });
   }
-
   //   // DEACTIVATE LIGHT
   DeactivateLight() {
     this.lit.forEach((l) => {
       l.classList.remove("active");
     });
   }
-
   //   // GET ACTIVE SORROW
   getSorrowActive() {
     this.sor.forEach((s) => {
@@ -158,14 +135,12 @@ class Mysteries {
       mystery.push(s);
     });
   }
-
   //   // DEACTIVE SORROW
   DeactivateSorrow() {
     this.sor.forEach((s) => {
       s.classList.remove("active");
     });
   }
-
   //   // GET ACTIVE GLORIOUS
   getGloriousActive() {
     this.glo.forEach((g) => {
@@ -173,7 +148,6 @@ class Mysteries {
       mystery.push(g);
     });
   }
-
   //   // DEACTIVATE GLORIOUS
   DeactivateGlorious() {
     this.glo.forEach((g) => {
@@ -181,6 +155,7 @@ class Mysteries {
     });
   }
 }
+// END OF CLASS MYSTERIES
 
 const joyActive = new Mysteries("joy");
 const lightActive = new Mysteries("lit");
@@ -231,32 +206,27 @@ nextBtn.addEventListener("click", function () {
 
   if (beads <= 10) {
     mystery[0].classList.add("active");
-        updateDisplay();
-
+    updateDisplay();
   }
   if (beads > 10) {
     mystery[0].classList.remove("active");
     mystery[1].classList.add("active");
-        updateDisplay();
-
+    updateDisplay();
   }
   if (beads > 20) {
     mystery[1].classList.remove("active");
     mystery[2].classList.add("active");
-        updateDisplay();
-
+    updateDisplay();
   }
   if (beads > 30) {
     mystery[2].classList.remove("active");
     mystery[3].classList.add("active");
-        updateDisplay();
-
+    updateDisplay();
   }
   if (beads > 40) {
     mystery[3].classList.remove("active");
     mystery[4].classList.add("active");
-        updateDisplay();
-
+    updateDisplay();
   }
   if (beads === 50 || beads === 0) {
     mystery[4].classList.remove("active");
