@@ -43,35 +43,24 @@ let mysteryOrigin = mystery.slice();
 
 const browserMessage = document.getElementById("chromeBrowser");
 
-let uA = navigator.userAgent;
-let browser;
-let browserList = [
-  {
-    name: ("firefox", "Firefox"),
-    value: "firefox",
-  },
-  { name: "Opera", value: "OPR" },
-  {
-    name: "Edge" || "Edg" || "edge",
-    value: "Edge",
-  },
-  { name: "Safari", value: "Safari" },
-];
+let ba = ['Chrome','Firefox','Safari','Opera','Edg' || 'Edge'];
+let b, ua = navigator.userAgent;
 
-for (let i in browserList) {
-  if (browserList[i].name.some((name) => uA.match(name))) {
-    browserMessage.classList.add("active");
-    c(uA[i]);
-    break;
-  } else {
-    browserMessage.classList.remove("active");
-  }
-}
+// for (let i = 0; i < ba.length; i++) {
+//   if (ua.indexOf(ba[i]) > -1) {
+//     b = ba[i];
+//     browserMessage.classList.add("active");
+//     return c(browserMessage);
+    
+//   } if(b === 'Chrome') {
+//     return browserMessage.classList.remove("active");
+//   }
+// }
 
-clearTimeout(uA);
-uA = setTimeout(() => {
-  browserMessage.classList.remove("active");
-}, 6000);
+// clearTimeout(ua);
+// ua = setTimeout(() => {
+//   browserMessage.classList.remove("active");
+// }, 6000);
 
 let AllButtons = [joyfulBtn, lightBtn, sorrowfulBtn, gloriousBtn];
 let InActivities = 180000;
