@@ -881,30 +881,6 @@
             z-index: 9;
             }
 
-                    /* POP UP MSG */
-          .pop_up_msg{
-            position: fixed;
-            color: var(--green-popMsg);
-            z-index: 9;
-            top: 150px;
-            left: 45%;
-            font-size: small;
-            display: none;
-            transition: ease 0.5s;
-          }
-          
-          .pop_up_msg.active{
-            position: fixed;
-            color: var(--green-popMsg);
-            z-index: 8;
-            top: 350px;
-            left: 48%;
-            font-size: small;
-            display: block;
-            transition: ease 0.5s;
-          }          
-
-
         .mystery  p, .sub__title{
         right: 30px;
         position: absolute;

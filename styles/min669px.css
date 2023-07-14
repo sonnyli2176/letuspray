@@ -66,29 +66,7 @@
   border-radius: 5px;
   text-align: center;}
 
-           /* POP UP MSG */
-          .pop_up_msg{
-            position: fixed;
-            color: var(--green-popMsg);
-            z-index: 0;
-            top: 250px;
-            left: 45%;
-            font-size: small;
-            display: none;
-            transition: ease 0.5s;
-          }
-          
-          .pop_up_msg.active{
-            position: fixed;
-            color: var(--green-popMsg);
-            z-index: 1;
-            top: 355px;
-            left: 40%;
-            font-size: small;
-            display: block;
-            transition: ease 0.5s;
-          }
-
+    
           .joyful_btn,
           .light_btn,
           .sorrowful_btn,
@@ -406,19 +384,19 @@
                       display: block;
                       z-index: -1;
                       transition: 0.5s;
-
+                      margin: 0px;
                     }
 
                     .mary {
                       width: 100%;
                       grid-area: ls;
-                      justify-self: self-end;
+                      justify-self: center;
                     }
 
                     .roses {
                       width: 100%;
                       grid-area: rs;
-                      justify-self: left;
+                      justify-self: center;
                     }
 
                     .home {

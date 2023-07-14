@@ -67,6 +67,7 @@
               ". title ham"
               "ls content rs"
               "ls footer rs";
+              column-gap: 10px;
           }
 
 
@@ -419,13 +420,13 @@
             .mary {
               width: 100%;
               grid-area: ls;
-              justify-self: self-end;
+              justify-self: center;
             }
 
             .roses {
               width: 100%;
               grid-area: rs;
-              justify-self: left;
+              justify-self: center;
             }
             #wrapper {
               margin: 4rem 10px 1rem;
@@ -667,6 +668,29 @@
               top: 50%;
             }
 
+     div.gridContent {
+            z-index: 0;
+          }
+            
+                    .mary,
+                    .roses {
+                      display: block;
+                      z-index: -1;
+                      transition: 0.5s;
+                      margin: 0 10px;
+                    }
+
+                    .mary {
+                      width: 100%;
+                      grid-area: ls;
+                      justify-self: center;
+                    }
+
+                    .roses {
+                      width: 100%;
+                      grid-area: rs;
+                      justify-self: center;
+                    }
             /* End of Hamburger Nav */
 
             /* ==================================================== */
