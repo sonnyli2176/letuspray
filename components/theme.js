@@ -4,17 +4,17 @@ const offScreenMenu = document.querySelector(".offScreenMenu");
 const darkMode = document.querySelector(".darkMode");
 const textLight = document.querySelector(".textLight");
 const textDark = document.querySelector(".textDark");
-const mary = document.querySelector(".mary");
-let maryD = document.querySelector(".maryD");
-const roses = document.querySelector(".roses");
+// const mary = document.querySelector(".mary");
+// let maryD = document.querySelector(".maryD");
+// const roses = document.querySelector(".roses");
 let sun = document.querySelector(".sun");
 let gallery = document.querySelector("body");
 
 // STORAGE ELEMENTS
 let darkModeStorage = localStorage.getItem("darkMode");
 let sunStorage = localStorage.getItem("sunDark");
-let maryStorage = localStorage.getItem("maryStorage");
-let roseStorage = localStorage.getItem("roseDark");
+// let maryStorage = localStorage.getItem("maryStorage");
+// let roseStorage = localStorage.getItem("roseDark");
 let textMode = localStorage.getItem("textDark");
 let galleryMode = localStorage.getItem("galleryD");
 
@@ -105,51 +105,51 @@ function galleryOff() {
 
 
 // ===============   MARY THEME   ===============
-function MaryD() {
-  if (mary) {
-    mary.src = "images/maryD.png";
-    localStorage.setItem("maryStorage", "on");
-  }
-};
+// function MaryD() {
+//   if (mary) {
+//     mary.src = "images/HolyMother.jpg";
+//     localStorage.setItem("maryStorage", "on");
+//   }
+// };
 
-function Mary() {
-  if (mary) {
-    mary.src = "images/mary.png";
-    localStorage.setItem("maryStorage", "off");
-  }
-};
+// function Mary() {
+//   if (mary) {
+//     mary.src = "images/HolyMother.jpg";
+//     localStorage.setItem("maryStorage", "off");
+//   }
+// };
 
-if (maryStorage === "on" ? MaryD() : Mary());
+// if (maryStorage === "on" ? MaryD() : Mary());
 
-    sun.addEventListener("click", () => {
-  maryStorage = localStorage.getItem("maryStorage");
-    if (maryStorage !== "on"? MaryD() : Mary());
-});
+//     sun.addEventListener("click", () => {
+//   maryStorage = localStorage.getItem("maryStorage");
+//     if (maryStorage !== "on"? MaryD() : Mary());
+// });
 
 
 
 // ROSES THEME
-function RosesDark() {
-  if (roses) {
-    roses.src = "images/rosesD.png";
-    localStorage.setItem("roseDark", "on");
-  }
-};
+// function RosesDark() {
+//   if (roses) {
+//     roses.src = "images/MaryBlue.png";
+//     localStorage.setItem("roseDark", "on");
+//   }
+// };
 
-function Roses() {
-  if (roses) {
-    roses.src = "images/roses.png";
-    localStorage.setItem("roseDark", "off");
-  }
-};
+// function Roses() {
+//   if (roses) {
+//     roses.src = "images/MaryBlue.png";
+//     localStorage.setItem("roseDark", "off");
+//   }
+// };
 
-if (roseStorage === "on"? RosesDark() : Roses());
+// if (roseStorage === "on"? RosesDark() : Roses());
 
 
-sun.addEventListener("click", () => {
-    roseStorage = localStorage.getItem("roseDark");
-if (roseStorage !== "on"? RosesDark() : Roses());
-});
+// sun.addEventListener("click", () => {
+//     roseStorage = localStorage.getItem("roseDark");
+// if (roseStorage !== "on"? RosesDark() : Roses());
+// });
 
 
   // TEXT THEME
